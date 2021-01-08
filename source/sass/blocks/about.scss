@@ -22,6 +22,7 @@
     position: absolute;
     bottom: 0;
     left: 20px;
+
     width: 292px;
     height: 100%;
 
@@ -35,8 +36,10 @@
   }
 
   @media #{$tablet} {
-    border-radius: 0 0 60px 60px;
     padding: 0 0 88px;
+
+    border-radius: 0 0 60px 60px;
+
     &::before,
     &::after {
       display: none;
@@ -57,9 +60,8 @@
   @media #{$tablet} {
     display: flex;
     flex-wrap: wrap;
-
-    padding: 37px 345px 0 34px;
     min-height: 596px;
+    padding: 37px 345px 0 34px;
 
     &::before {
       content: "";
@@ -78,8 +80,8 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: 0;
       right: -32px;
+      bottom: 0;
 
       width: 376px;
       height: 548px;
@@ -100,14 +102,17 @@
     &::before {
       width: 212px;
       height: 212px;
+
       background-color: $dark-blue-500;
     }
 
     &::after {
-      bottom: 0;
       right: 0;
+      bottom: 0;
+
       width: 630px;
       height: 665px;
+
       background-image: url("../img/about_desktop.png");
       background-size: cover;
 
@@ -183,7 +188,7 @@
 
   @media #{$tablet} {
     display: inline-flex;
-    width: 276px;
     align-self: flex-end;
+    width: 276px;
   }
 }

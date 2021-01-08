@@ -20,9 +20,9 @@ $radius: 30px;
   }
 
   @media #{$tablet} {
-    $radius: 60px;
-
     border-radius: 0 0 $radius $radius;
+
+    $radius: 60px;
 
     &::before {
       height: $radius;
@@ -153,8 +153,9 @@ $radius: 30px;
 
 .registration__button {
   justify-content: center;
-  cursor: pointer;
   width: 60px;
+
+  cursor: pointer;
 
   @media #{$tablet} {
     width: 80px;
@@ -164,22 +165,26 @@ $radius: 30px;
   }
 
   @media #{$desktop} {
-    width: 323px;
     justify-content: space-between;
+    width: 323px;
   }
 }
 
 .registration__button-text {
   @media #{$desktop} {
-  position: static;
-  width: auto;
-  height: auto;
-  margin: 0;
-  border: 0;
-  padding: 0;
-  white-space: normal;
-  clip-path: none;
-  clip: auto;
-  overflow: visible;
+    position: static;
+
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+
+    white-space: normal;
+
+    border: 0;
+
+    clip: auto;
+    clip-path: none;
   }
 }

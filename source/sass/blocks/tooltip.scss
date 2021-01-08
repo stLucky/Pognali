@@ -3,13 +3,14 @@ $triangle-size: 8px;
 .tooltip {
   position: relative;
   z-index: 10;
-  
+
   &::before,
   &::after {
     position: absolute;
 
     display: none;
   }
+
   &::before {
     content: "";
     top: 101%;

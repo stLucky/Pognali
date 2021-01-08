@@ -1,7 +1,7 @@
 {
-  "name": "cat-energy-21",
+  "name": "Pognali",
   "private": true,
-  "description": "Личный проект «Кэт энерджи» от HTML Academy",
+  "description": "Сервис поиска попутчиков для путешествий",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.0.2",
@@ -25,7 +25,7 @@
     "postcss": "8.1.7",
     "postcss-csso": "^5.0.0",
     "stylelint": "13.7.2",
-    "stylelint-config-htmlacademy": "0.1.4"
+    "stylelint-config-htmlacademy": "^0.1.4"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
