@@ -1,0 +1,29 @@
+.transport {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.transport__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 25px;
+  margin: 0 9px 0 0;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  &--active {
+    color: $dark-blue-475;
+  }
+
+  &--inactive {
+    color: rgba($dark-blue-300, 0.15);
+  }
+}
+
+.transport__svg {
+  vertical-align: middle;
+}

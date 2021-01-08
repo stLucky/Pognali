@@ -1,0 +1,476 @@
+.promo {
+  position: relative;
+  z-index: -2;
+
+  padding: 0 0 38px;
+
+  background-image: linear-gradient(to bottom, $dark-blue-400 70%, $dark-blue-350 70%, $dark-blue-350 100%);
+
+  @media #{$tablet} {
+    padding: 0 0 96px;
+
+    background-color: $dark-blue-375;
+    background-image: none;
+  }
+
+  @media #{$desktop} {
+    padding: 0 0 123px;
+
+    background-color: $dark-blue-350;
+
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 116px);
+      z-index: -1;
+
+      width: 431px;
+      height: 640px;
+
+      background-image: url("../img/traveller-illustration_desktop.png");
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 750px;
+      bottom: 0;
+      left: 0;
+      z-index: -2;
+      background-image: url("../img/globe-back_desktop.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      border-radius: 0 0 60px 60px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/globe-back_desktop@2x.jpg");
+      }
+    }
+  }
+}
+
+.promo__top-wrap {
+  @media #{$desktop} {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: 52px auto 53px;
+    padding: 50px 60px;
+  }
+}
+
+.promo__slogan-wrap {
+  @media #{$desktop} {
+    max-width: auto;
+    margin: 0 0 0 67px;
+    padding: 0;
+  }
+}
+
+.promo__slogan {
+  position: relative;
+  z-index: 2;
+
+  margin: 0;
+  padding: 0 16px;
+
+  text-align: center;
+
+  @media #{$tablet} {
+    margin: 0 0 86px;
+    padding: 0 50px;
+  }
+
+  @media #{$desktop} {
+    width: 518px;
+    margin: 0;
+    padding: 0;
+
+    text-align: left;
+  }
+}
+
+.promo__buttons-wrap {
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 246px 0 28px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 15%;
+    bottom: 50%;
+    z-index: 1;
+
+    width: 192px;
+    height: 255px;
+
+    background-image: url("../img/traveller-illustration_mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/traveller-illustration_mobile@2x.png");
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    z-index: 0;
+
+    width: 344px;
+    max-width: 100%;
+    height: 248px;
+
+    background-image: url("../img/globe-back_mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/globe-back_mobile@2x.jpg");
+    }
+  }
+
+  @media #{$tablet} {
+    display: none;
+  }
+}
+
+.promo__contacts {
+  position: relative;
+  z-index: 2;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+  }
+
+  &--tel {
+    background-color: $orange-700;
+
+    &::before {
+      width: 18px;
+      height: 18px;
+
+      background-image: url("../img/icon-telephone-2.svg");
+    }
+  }
+
+  &--email {
+    background-color: $orange-450;
+
+    &::before {
+      width: 18px;
+      height: 16px;
+
+      background-image: url("../img/icon-mail-2.svg");
+      background-size: cover;
+    }
+  }
+}
+
+.promo__authorization-button {
+  z-index: 2;
+  width: initial;
+
+  flex-grow: 1;
+
+  @media #{$mobile-tablet} {
+    flex-grow: 0;
+    width: 470px;
+  }
+}
+
+.promo__blockquote-wrap {
+  @media #{$desktop} {
+    max-width: auto;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.promo__blockquote {
+  max-width: 65%;
+  // min-height: 150px;
+  margin: 0 0 29px 25px;
+
+  font-size: 16px;
+  color: $white-400;
+
+  @media #{$tablet} {
+    max-width: 45%;
+    margin: 0 0 213px 32px;
+  }
+
+  @media #{$desktop} {
+    max-width: 264px;
+    margin: 10px 23px 0 0;
+  }
+}
+
+.promo__quote {
+  margin: 0 0 18px;
+
+  font-weight: 300;
+  line-height: 22px;
+
+  @media #{$tablet} {
+    margin: 0 0 46px;
+
+    font-size: 28px;
+    line-height: 33px;
+  }
+}
+
+.promo__quote-author {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+
+  @media #{$tablet} {
+    font-size: 21px;
+    line-height: 25px;
+  }
+}
+
+.promo__guide-list {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: $dark-blue-400;
+
+  counter-reset: item;
+
+  @media #{$tablet} {
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 111px;
+      bottom: 100%;
+
+      width: 372px;
+      height: 451px;
+
+      background-image: url("../img/traveller-illustration_tablet.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/traveller-illustration_tablet@2x.png");
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 50%;
+      left: 0;
+      z-index: -2;
+
+      width: 850px;
+      max-width: 100%;
+      height: 612px;
+
+      background-image: url("../img/globe-back_tablet.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/globe-back_tablet@2x.jpg");
+      }
+    }
+  }
+
+  @media #{$desktop} {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.promo__guide-item {
+  display: flex;
+  justify-content: space-between;
+  margin: -10px 0 0;
+  padding: 22px 21px 32px 24px;
+
+  border-radius: 10px 10px 0 0;
+
+  &:first-child {
+    margin: 0;
+  }
+
+  &--step-first {
+    background-color: $orange-700;
+  }
+
+  &--step-second {
+    background-color: $orange-600;
+  }
+
+  &--step-third {
+    background-color: $orange-450;
+  }
+
+  &--step-fourth {
+    padding: 22px 21px 22px 24px;
+
+    background-color: $orange-400;
+    border-radius: 10px;
+  }
+
+  &::after {
+    content: counter(item);
+
+    display: block;
+
+    font-size: 18px;
+    line-height: 18px;
+    color: $white-400;
+
+    counter-increment: item;
+  }
+
+  @media #{$tablet} {
+    position: relative;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+    margin: 0;
+    padding: 30px 33px 22px;
+
+    &--step-first {
+      border-radius: 20px 0 0 0;
+    }
+
+    &--step-second {
+      border-radius: 20px 20px 0 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        width: 50%;
+        height: 100%;
+
+        background-color: $orange-700;
+      }
+    }
+
+    &--step-third {
+      border-radius: 0 0 0 20px;
+    }
+
+    &--step-fourth {
+      border-radius: 0 0 20px 20px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+
+        width: 50%;
+        height: 100%;
+
+        background-color: $orange-450;
+      }
+    }
+
+    &::after {
+      margin: 10px 0 0;
+
+      font-size: 30px;
+      line-height: 30px;
+    }
+  }
+
+  @media #{$desktop} {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 25%;
+    padding: 30px 34px;
+
+    &--step-first {
+      width: 315px;
+
+      border-radius: 20px 0 0 20px;
+    }
+
+    &--step-second {
+      width: 345px;
+
+      border-radius: 20px 0 0 20px;
+    }
+
+    &--step-third {
+      width: 345px;
+
+      border-radius: 20px 0 0 20px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+
+        width: 50%;
+        height: 100%;
+
+        background-color: $orange-600;
+      }
+    }
+
+    &--step-fourth {
+      width: 315px;
+
+      border-radius: 20px;
+    }
+
+    &::after {
+      margin: 0;
+
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+// Colors
+$black-400: #000000;
+$dark-blue-200: #132576;
+$dark-blue-300: #1d2e5b;
+$dark-blue-350: #192144;
+$dark-blue-375: #182044;
+$dark-blue-400: #161c35;
+$dark-blue-450: #121936;
+$dark-blue-475: #101d41;
+$dark-blue-500: #141b3b;
+$white-400: #ffffff;
+$white-450: #F2F2F2;
+$grey-275: #e1e3e9;
+$grey-300: #edeff6;
+$grey-325: #e6e8f1;
+$grey-350: #e2e5f2;
+$grey-400: #cccccc;
+$grey-700: #444444;
+$orange-400: #ffd74b;
+$orange-450: #ffbd30;
+$orange-600: #ffa530;
+$orange-700: #ff8d30;
+$pink-400: #f97676;
+$lightgreen-400: #81e31e;
+// Fonts
+
+$basic-font: "Blogger Sans", "Arial", sans-serif;
+
+// Viewports
+
+$mobile-tablet-width: 600px;
+$mobile-width-only: 767px;
+$tablet-width: 768px;
+$desktop-width: 1440px;
+$mobile-tablet: "(min-width: #{$mobile-tablet-width})";
+$tablet: "(min-width: #{$tablet-width})";
+$desktop: "(min-width: #{$desktop-width})";

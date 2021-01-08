@@ -1,0 +1,101 @@
+
+.level {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  border-radius: 50%;
+}
+
+.level--companion {
+  $level-size: 60px;
+  $stroke-width: 4px;
+
+  width: $level-size;
+  height: $level-size;
+
+  color: $white-400;
+
+  background-color: rgba($black-400, 0.6);
+
+  .level__svg {
+    width: $level-size;
+    height: $level-size;
+
+    stroke-linecap: round;
+    stroke-width: $stroke-width;
+  }
+
+  .level__number {
+    margin: 0 0 2px;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    border-bottom: 1px solid rgba($white-400, 0.3);
+  }
+
+  .level__text {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.level--form {
+  $level-size: 100px;
+  $stroke-width: 2px;
+
+  width: $level-size;
+  height: $level-size;
+
+  background-color: transparent;
+
+  .level__svg {
+    width: $level-size;
+    height: $level-size;
+
+    stroke-linecap: butt;
+    stroke-width: $stroke-width;
+  }
+
+  .level__number {
+    margin: 0 0 6px;
+
+    font-size: 38px;
+    line-height: 38px;
+    color: $dark-blue-400;
+
+    border-bottom: 1px solid rgba($grey-700, 0.3);
+  }
+
+  .level__text {
+    font-size: 18px;
+    line-height: 18px;
+    color: $grey-700;
+  }
+}
+
+.level__svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform: rotate(-87deg);
+
+  fill: none;
+  stroke: $orange-700;
+}
+
+.level__number {
+  position: relative;
+
+  font-weight: 700;
+}
+
+.level__text {
+  position: relative;
+}

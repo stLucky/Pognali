@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сервис поиска попутчиков для путешествий</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="page__body body">
+  <header class="page__header header header--nojs">
+    <div class="header__container container">
+      <div class="header__logo-wrap">
+        <a class="header__logo">
+          <picture>
+            <source type="image/webp" media="(min-width:1440px)" srcset="img/logo_desktop.webp 1x, img/logo_desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width:768px)" srcset="img/logo_tablet.webp 1x, img/logo_tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/logo_mobile.webp 1x, img/logo_mobile@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/logo_desktop.png 1x, img/logo_desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo_tablet.png 1x, img/logo_tablet@2x.png 2x">
+            <img class="header__logo-img header__logo-img--white" src="img/logo_mobile.png" srcset="img/logo_mobile@2x.png 2x"
+              alt="Белый логотип сервиса Погнали" width="96" height="15">
+          </picture>
+          <picture>
+            <source type="image/webp" media="(min-width:768px)" srcset="img/logo_tablet2.webp 1x, img/logo_tablet2@2x.webp 2x">
+            <source type="image/webp" srcset="img/logo_mobile2.webp 1x, img/logo_mobile2@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/logo_tablet2.png 1x, img/logo_tablet2@2x.png 2x">
+            <img class="header__logo-img header__logo-img--blue" src="img/logo_mobile2.png" srcset="img/logo_mobile2@2x.png 2x"
+              alt="Синий логотип сервиса Погнали" width="100" height="15">
+          </picture>
+        </a>
+        <button class="header__toggle button" type="button">
+          <span class="visually-hidden">
+            Открыть меню
+          </span>
+        </button>
+      </div>
+      <nav class="header__main-nav main-nav main-nav--theme-light">
+        <ul class="main-nav__list list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="blank.html">
+              О сервисе
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">
+              Направления
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html">
+              Попутчики
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <a class="header__authorization-button button button--theme-sun button--secondary" href="blank.html">
+        Авторизация
+      </a>
+      <div class="header__contacts contacts contacts--header">
+        <a class="contacts__link contacts__link--theme-ocean contacts__link--tel" href="tel:88005558628">
+          <div class="contacts__link-content">
+            <svg class="contacts__icon contacts__icon--tel" width="18" height="17" aria-hidden="true" focusable="false">
+              <use xlink:href="img/sprite.svg#icon-telephone"></use>
+            </svg>
+            8 800 555-86-28
+          </div>
+        </a>
+        <a class="contacts__link contacts__link--theme-ocean contacts__link--email" href="mailto:mail@htmlacademy.ru">
+          <div class="contacts__link-content">
+            <svg class="contacts__icon contacts__icon--email" width="24" height="25" aria-hidden="true" focusable="false">
+              <use xlink:href="img/sprite.svg#icon-mail"></use>
+            </svg>
+            mail@htmlacademy.ru
+          </div>
+        </a>
+      </div>
+      <ul class="header__social social list">
+        <li class="social__item">
+          <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy">
+            <span class="visually-hidden">
+              Мы в Фейсбук
+            </span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">
+              Мы в Вконтакте
+            </span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--inst" href="https://www.instagram.com/htmlacademy">
+            <span class="visually-hidden">
+              Мы в Инстаграм
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main class="page__main main">
+    <h1 class="visually-hidden">
+      "Погнали" - сервис поиска попутчиков для путешествий
+    </h1>
+    <section class="main__promo promo">
+      <div class="promo__top-wrap">
+        <div class="promo__slogan-wrap container">
+          <h2 class="visually-hidden">
+            Промо-информация
+          </h2>
+          <p class="promo__slogan title title--large title--theme-light">
+            В&nbsp;путешествие с&nbsp;крутыми<br> попутчиками!
+          </p>
+        </div>
+        <div class="promo__buttons-wrap container">
+          <a class="promo__contacts promo__contacts--tel" href="tel:88005558628">
+            <span class="visually-hidden">
+              8 800 555-86-28
+            </span>
+          </a>
+          <a class="promo__contacts promo__contacts--email" href="mailto:mail@htmlacademy.ru">
+            <span class="visually-hidden">
+              mail@htmlacademy.ru
+            </span>
+          </a>
+          <a class="promo__authorization-button button button--theme-sun button--secondary" href="blank.html">
+            Авторизация
+          </a>
+        </div>
+        <div class="promo__blockquote-wrap container">
+          <blockquote class="promo__blockquote">
+            <p class="promo__quote">
+              &laquo;Лучшее приложение, что&nbsp;я видел в жизни!&raquo;
+            </p>
+            <cite class="promo__quote-author">
+              Мурат Эльтазин главный&nbsp;редактор газеты &laquo;гаджетлайф&raquo;
+            </cite>
+          </blockquote>
+        </div>
+      </div>
+      <ol class="promo__guide-list list container">
+        <li class="promo__guide-item promo__guide-item--step-first">
+          Выберите<br> направление
+        </li>
+        <li class="promo__guide-item promo__guide-item--step-second">
+          Изучите идеи путешественников
+        </li>
+        <li class="promo__guide-item promo__guide-item--step-third">
+          Находите тех,<br> кто похож на вас
+        </li>
+        <li class="promo__guide-item promo__guide-item--step-fourth">
+          Путешествуйте<br> вместе!
+        </li>
+      </ol>
+    </section>
+    <section class="about">
+      <div class="container">
+        <div class="about__inner">
+          <h2 class="about__title title title--medium title--theme-orange">
+            О сервисе
+          </h2>
+          <p class="about__desc">
+            Любое путешествие веселее с&nbsp;попутчиками, которые на одной волне с&nbsp;тобой! Делитесь своими идеями путешествий&nbsp;<br>и черпайте
+            вдохновение в&nbsp;чужих.
+          </p>
+          <p class="about__desc about__desc--special">
+            А если найдете кого-то близкого по духу &mdash; скорее зовите в совместный трип!
+          </p>
+          <a class="about__button button button--primary button--theme-sun" href="blank.html">
+            Подробнее
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="directions">
+      <div class="container">
+        <div class="directions__inner">
+          <div class="directions__desc-wrap">
+            <h2 class="directions__title title title--medium title--theme-orange">
+              Направления
+            </h2>
+            <p class="directions__desc">
+              Мы&nbsp;не&nbsp;продаем туры и&nbsp;ничего&nbsp;не&nbsp;рекламируем. Люди сами пишут о&nbsp;странах, куда хотели&nbsp;бы отправиться и&nbsp;чем
+              можно там заняться.
+            </p>
+          </div>
+          <ul class="directions__list list">
+            <li class="directions__item direction">
+              <a class="direction__content" href="blank.html" aria-label="Переход на страницу с направлением в Таиланд">
+                <div class="direction__text-wrap">
+                  <h3 class="direction__title">
+                    Таиланд
+                  </h3>
+                  <p class="direction__desc">
+                    Джунгли зовут!
+                  </p>
+                  <span class="direction__users">
+                    18321
+                  </span>
+                  <div class="direction__flag-wrap tooltip" data-tooltip="Таиланд">
+                    <img class="direction__flag" src="img/flag-thailand.svg" alt="Флаг Таиланда" width="35" height="24">
+                  </div>
+                </div>
+                <div class="direction__img-wrap">
+                  <picture>
+                    <source type="image/webp" media="(min-width:768px)" srcset="img/thailand_tablet.webp 1x, img/thailand_tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/thailand_mobile.webp 1x, img/thailand_mobile@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/thailand_tablet.png 1x, img/thailand_tablet@2x.png 2x">
+                    <img class="direction__img" src="img/thailand_mobile.png" srcset="img/thailand_mobile@2x.png 2x" alt="Голубая лагуна Таиланда" width="270"
+                      height="110">
+                  </picture>
+                </div>
+              </a>
+            </li>
+            <li class="directions__item direction">
+              <a class="direction__content" href="blank.html" aria-label="Переход на страницу с направлением во Францию">
+                <div class="direction__text-wrap">
+                  <h3 class="direction__title">
+                    Франция
+                  </h3>
+                  <p class="direction__desc">
+                    Трэ бьен, манифик!
+                  </p>
+                  <span class="direction__users">
+                    12518
+                  </span>
+                  <div class="direction__flag-wrap tooltip" data-tooltip="Франция">
+                    <img class="direction__flag" src="img/flag-france.svg" alt="Флаг Франции" width="35" height="24">
+                  </div>
+                </div>
+                <div class="direction__img-wrap">
+                  <picture>
+                    <source type="image/webp" media="(min-width:768px)" srcset="img/france_tablet.webp 1x, img/france_tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/france_mobile.webp 1x, img/france_mobile@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/france_tablet.png 1x, img/france_tablet@2x.png 2x">
+                    <img class="direction__img" src="img/france_mobile.png" srcset="img/france_mobile@2x.png 2x" alt="Городская улица Франции" width="270"
+                      height="110">
+                  </picture>
+                </div>
+              </a>
+            </li>
+            <li class="directions__item direction">
+              <a class="direction__content" href="blank.html" aria-label="Переход на страницу с направлением в Чехию">
+                <div class="direction__text-wrap direction__text-wrap--special-padding">
+                  <h3 class="direction__title">
+                    Чехия
+                  </h3>
+                  <p class="direction__desc">
+                    Закоулки старой Европы
+                  </p>
+                  <span class="direction__users">
+                    5326
+                  </span>
+                  <div class="direction__flag-wrap tooltip" data-tooltip="Чехия">
+                    <img class="direction__flag" src="img/flag-czech.svg" alt="Флаг Чехии" width="35" height="24">
+                  </div>
+                </div>
+                <div class="direction__img-wrap">
+                  <picture>
+                    <source type="image/webp" media="(min-width:768px)" srcset="img/czech_tablet.webp 1x, img/czech_tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/czech_mobile.webp 1x, img/czech_mobile@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/czech_tablet.png 1x, img/czech_tablet@2x.png 2x">
+                    <img class="direction__img" src="img/czech_mobile.png" srcset="img/czech_mobile@2x.png 2x"
+                      alt="Прогулка на пароходе по реке мимо готической архитектуры Чехии" width="270" height="110">
+                  </picture>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <a class="directions__button button button--primary button--theme-sun" href="form.html">
+            Показать все
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="companions">
+      <div class="container">
+        <div class="companions__inner">
+          <div class="companions__desc-wrap">
+            <h2 class="companions__title title title--medium title--theme-orange">
+              Попутчики
+            </h2>
+            <p class="companions__desc">
+              Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль,<br> а другому маршрут для хайкинга.
+            </p>
+            <p class="companions__desc companions__desc--special">
+              Теперь можно легко<br> найти единомышленников!
+            </p>
+          </div>
+          <ul class="companions__list list">
+            <li class="companions__item companion">
+              <div class="companion__desc-wrap">
+                <h3 class="companion__title status status--offline">
+                  <a class="companion__title-link" href="blank.html">
+                    Таня Фирсова
+                  </a>
+                </h3>
+                <span class="visually-hidden">Оффлайн</span>
+                <p class="companion__tags">
+                  #ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи
+                </p>
+                <ul class="companion__transport transport list">
+                  <li class="transport__item transport__item--active tooltip" data-tooltip="Авиаперелет">
+                    <svg class="transport__svg" width="21" height="21" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#icon-plane"></use>
+                    </svg>
+                    <span class="visually-hidden">
+                      Передвигается авиаперелетом
+                    </span>
+                  </li>
+                  <li class="transport__item transport__item--inactive tooltip" data-tooltip="Автотранспорт">
+                    <svg class="transport__svg" width="17" height="19" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#icon-bus"></use>
+                    </svg>
+                    <span class="visually-hidden">
+                      Не передвигается автотранспортом
+                    </span>
+                  </li>
+                  <li class="transport__item transport__item--inactive tooltip" data-tooltip="Велосипед">
+                    <svg class="transport__svg" width="24" height="24" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#icon-bicycle"></use>
+                    </svg>
+                    <span class="visually-hidden">
+                      Не передвигается велосипедом
+                    </span>
+                  </li>
+                  <li class="transport__item transport__item--inactive tooltip" data-tooltip="Пешком">
+                    <svg class="transport__svg" width="21" height="23" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#icon-run"></use>
+                    </svg>
+                    <span class="visually-hidden">
+                      Не передвигается пешком
+                    </span>
+                  </li>
+                </ul>
+                <ul class="companion__flags list">
+                  <li class="companion__flag tooltip" data-tooltip="Шри&#8209;Ланка">
+                    <img class="companion__flag-img" src="img/flag-sri-lanka.svg" alt="Флаг Шри-Ланки" width="35" height="25">
+                  </li>
+                  <li class="companion__flag tooltip" data-tooltip="Таиланд">
+                    <img class="companion__flag-img" src="img/flag-thailand.svg" alt="Флаг Таиланда" width="35" height="25">
+                  </li>
+                  <li class="companion__flag tooltip" data-tooltip="Сейшельские острова">
+                    <img class="companion__flag-img" src="img/flag-seychelles.svg" alt="Флаг Сейшельских Островов" width="35" height="25">
+                  </li>
+                </ul>
+              </div>
+              <p class="companion__level level level--companion">
+                <svg class="level__svg" width="60" height="60" viewBox="0 0 60 60" aria-hidden="true" focusable="false">
+                  <circle cx="30" cy="30" r="28" stroke-dasharray="175,929188601" stroke-dashoffset="8"></circle>
+                </svg>
+                <span class="level__number">
+                  99
+                </span>
+                <span class="level__text">
+                  level
+                </span>
+              </p>
+              <div class="companion__img-wrap">
+                <picture>
+                  <source type="image/webp" media="(min-width:768px)" srcset="img/firsova_tablet.webp 1x, img/firsova_tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/firsova_mobile.webp 1x, img/firsova_mobile@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/firsova_tablet.png 1x, img/firsova_tablet@2x.png 2x">
+                  <img class="companion__img" src="img/firsova_mobile.jpg" srcset="img/firsova_mobile@2x.png 2x"
+                    alt="Радостная Таня Фирсова в купальнике плывет на спине в бассейне" width="270" height="270">
+                </picture>
+              </div>
+            </li>
+            <li class="companions__item companion">
+              <div class="companion__desc-wrap">
+                <h3 class="companion__title status status--online">
+                  <a class="companion__title-link" href="blank.html">
+                    Петя Демин
+                  </a>
+                </h3>
+                <span class="visually-hidden">Онлайн</span>
+                <p class="companion__tags">
+                  #бургер #бар #футбол #концерт #крафт
+                </p>
+                <ul class="companion__transport transport list">
+                  <li class="transport__item transport__item--active tooltip" data-tooltip="Авиаперелет">
+                    <svg class="transport__svg" width="21" height="21" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#icon-plane"></use>
+                    </svg>
+                    <span class="visually-hidden">
+                      Передвигается авиаперелетом
+                    </span>
+                  </li>
+                  <li class="transport__item transport__item--active tooltip" data-tooltip="Автотранспорт">
+                    <svg class="transport__svg" width="17" height="19" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#icon-bus"></use>
+                    </svg>
+                    <span class="visually-hidden">
+                      Передвигается автотранспортом
+                    </span>
+                  </li>
+                  <li class="transport__item transport__item--inactive tooltip" data-tooltip="Велосипед">
+                    <svg class="transport__svg" width="24" height="24" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#icon-bicycle"></use>
+                    </svg>
+                    <span class="visually-hidden">
+                      Не передвигается велосипедом
+                    </span>
+                  </li>
+                  <li class="transport__item transport__item--active tooltip" data-tooltip="Пешком">
+                    <svg class="transport__svg" width="21" height="23" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#icon-run"></use>
+                    </svg>
+                    <span class="visually-hidden">
+                      Передвигается пешком
+                    </span>
+                  </li>
+                </ul>
+                <ul class="companion__flags list">
+                  <li class="companion__flag tooltip" data-tooltip="Бельгия">
+                    <img class="companion__flag-img" src="img/flag-belgium.svg" alt="Флаг Бельгии" width="35" height="25">
+                  </li>
+                  <li class="companion__flag tooltip" data-tooltip="Чехия">
+                    <img class="companion__flag-img" src="img/flag-czech.svg" alt="Флаг Чехии" width="35" height="25">
+                  </li>
+                </ul>
+              </div>
+              <p class="companion__level level level--companion">
+                <svg class="level__svg" width="60" height="60" viewBox="0 0 60 60" aria-hidden="true" focusable="false">
+                  <circle cx="30" cy="30" r="28" stroke-dasharray="175,929188601" stroke-dashoffset="32"></circle>
+                </svg>
+                <span class="level__number">
+                  80
+                </span>
+                <span class="level__text">
+                  level
+                </span>
+              </p>
+              <div class="companion__img-wrap">
+                <picture>
+                  <source type="image/webp" media="(min-width:768px)" srcset="img/demin_tablet.webp 1x, img/demin_tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/demin_mobile.webp 1x, img/demin_mobile@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/demin_tablet.png 1x, img/demin_tablet@2x.png 2x">
+                  <img class="companion__img" src="img/demin_mobile.jpg" srcset="img/demin_mobile@2x.png 2x"
+                    alt="Петя Демин с рыжей бородой в темных очках на фоне снежных холмов" width="270" height="270">
+                </picture>
+              </div>
+            </li>
+          </ul>
+          <a class="companions__button button button--primary button--theme-sun" href="catalog.html">
+            Показать всех
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="placement">
+      <div class="container">
+        <div class="placement__inner">
+          <h2 class="placement__title title title--medium title--theme-orange">
+            Добавьте свой профиль
+          </h2>
+          <dl class="placement__list list">
+            <div class="placement__item placement__item--service-1">
+              <dt class="placement__name">
+                Базовое размещение
+              </dt>
+              <dd class="placement__price">
+                Бесплатно
+              </dd>
+            </div>
+            <div class="placement__item placement__item--service-2">
+              <dt class="placement__name">
+                Вывод на первых позициях
+              </dt>
+              <dd class="placement__price">
+                99 руб./мес
+              </dd>
+            </div>
+            <div class="placement__item placement__item--service-3">
+              <dt class="placement__name">
+                Кастомный цвет карточки
+              </dt>
+              <dd class="placement__price">
+                59 руб./мес
+              </dd>
+            </div>
+          </dl>
+          <a class="placement__link" href="blank.html">
+            Показать тарифы для бизнеса
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="registration">
+      <div class="container">
+        <div class="registration__inner">
+          <p class="registration__title title title--medium title--theme-orange">
+            Заинтересовались?
+          </p>
+          <p class="registration__text">
+            Зарегистрируйтесь, это&nbsp;быстро&nbsp;и бесплатно! Уже&nbsp;зарегистрированы? Тогда скорее
+            <a class="registration__link" href="blank.html">авторизуйтесь</a>.
+          </p>
+          <form class="registration__form" action="https://echo.htmlacademy.ru" method="POST">
+            <input class="registration__input" id="registration__email" type="email" placeholder="E-mail">
+            <label class="visually-hidden" for="registration__email">Введите Ваш E-mail</label>
+            <button class="registration__button button button--primary button--theme-sun" type="submit">
+              <span class="registration__button-text visually-hidden">
+                Регистрация
+              </span>
+            </button>
+          </form>
+          <p class="registration__text registration__text--special-margin">
+            Остались вопросы? Мы&nbsp;с&nbsp;радостью на них ответим!
+          </p>
+          <div class="registration__contacts contacts contacts--registration">
+            <a class="contacts__link contacts__link--theme-sun contacts__link--tel" href="tel:88005558628">
+              <div class="contacts__link-content">
+                <svg class="contacts__icon contacts__icon--tel" width="18" height="17" aria-hidden="true" focusable="false">
+                  <use xlink:href="img/sprite.svg#icon-telephone"></use>
+                </svg>
+                8 800 555-86-28
+              </div>
+            </a>
+            <a class="contacts__link contacts__link--theme-sun contacts__link--email" href="mailto:mail@htmlacademy.ru">
+              <div class="contacts__link-content">
+                <svg class="contacts__icon contacts__icon--email" width="24" height="25" aria-hidden="true" focusable="false">
+                  <use xlink:href="img/sprite.svg#icon-mail"></use>
+                </svg>
+                mail@htmlacademy.ru
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="location">
+      <h2 class="visually-hidden">
+        Где мы находимся?
+      </h2>
+      <div class="location__text-wrap">
+        <div class="container">
+          <div class="location__text-inner">
+            <p class="location__text">
+              ул. Большая Конюшенная,&nbsp;19/8
+            </p>
+            <a class="location__button button button--primary" href="https://yandex.ru/maps/-/CCUIuCVuSC">
+              Проложить маршрут
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="location__map">
+        <div class="location__map-content" id="map">
+          <picture>
+            <source type="image/webp" media="(min-width:1440px)" srcset="img/map_desktop.webp 1x, img/map_desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width:400px)" srcset="img/map_tablet.webp 1x, img/map_tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/map_mobile.webp 1x, img/map_mobile@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/map_desktop.jpg 1x, img/map_desktop@2x.jpg 2x">
+            <source media="(min-width: 400px)" srcset="img/map_tablet.jpg 1x, img/map_tablet@2x.jpg 2x">
+            <img class="location__map-img" src="img/map_mobile.jpg" srcset="img/map_mobile@2x.jpg 2x"
+              alt="Адрес офиса сервиса «Погнали?» по ул. Б. Конюшенная, дом 19/8 Санкт-Петербург" width="320" height="424">
+          </picture>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <a class="footer__logo">
+          <picture>
+            <source type="image/webp" media="(min-width:1440px)" srcset="img/logo_desktop2.webp 1x, img/logo_desktop2@2x.webp 2x">
+            <source type="image/webp" media="(min-width:768px)" srcset="img/logo_tablet2.webp 1x, img/logo_tablet2@2x.webp 2x">
+            <source type="image/webp" srcset="img/logo_mobile2.webp 1x, img/logo_mobile2@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/logo_desktop2.png 1x, img/logo_desktop2@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo_tablet2.png 1x, img/logo_tablet2@2x.png 2x">
+            <img class="footer__logo-img" src="img/logo_mobile2.png" srcset="img/logo_mobile2@2x.png 2x" alt="Синий логотип сервиса Погнали">
+          </picture>
+        </a>
+        <ul class="footer__social social social--footer list">
+          <li class="social__item">
+            <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy">
+              <span class="visually-hidden">
+                Мы в Фейсбук
+              </span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">
+                Мы в Вконтакте
+              </span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--inst" href="https://www.instagram.com/htmlacademy">
+              <span class="visually-hidden">
+                Мы в Инстаграм
+              </span>
+            </a>
+          </li>
+        </ul>
+        <a class="footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
+          Разработано
+          <span class="visually-hidden">
+            Html Academy
+          </span>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=fc4e44cb-c351-4462-93d4-686a12532872&lang=ru_RU"></script>
+  <script src="js/script.min.js"></script>
+</body>
+</html>

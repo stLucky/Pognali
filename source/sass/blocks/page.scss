@@ -1,0 +1,37 @@
+.page {
+  height: 100%;
+
+  font-weight: 300;
+  font-size: 16px;
+  font-family: $basic-font;
+
+  background-color: $grey-300;
+}
+
+.page__body {
+  position: relative;
+  z-index: -3;
+
+  display: grid;
+  align-content: start;
+  min-width: 320px;
+  min-height: 100%;
+
+  grid-template-rows: min-content 1fr min-content;
+}
+
+.page__header {
+  padding: 16px 0;
+
+  @media #{$tablet} {
+    padding: 45px 0;
+  }
+
+  @media #{$desktop} {
+    padding: 47px 0 5px;
+  }
+}
+
+.page__main {
+  z-index: -3;
+}

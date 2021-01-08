@@ -1,0 +1,25 @@
+@mixin companion-back-lady {
+  width: 285px;
+  height: 285px;
+
+  background-image: url("../img/rogovaya-back_tablet.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/rogovaya-back_tablet@2x.png");
+  }
+}
+
+@mixin companion-back-boy {
+  width: 143px;
+  height: 143px;
+
+  background-image: url("../img/smolov-back.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/smolov-back@2x.png");
+  }
+}

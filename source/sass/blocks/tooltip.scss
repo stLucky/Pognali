@@ -1,0 +1,51 @@
+$triangle-size: 8px;
+
+.tooltip {
+  position: relative;
+  z-index: 10;
+  
+  &::before,
+  &::after {
+    position: absolute;
+
+    display: none;
+  }
+  &::before {
+    content: "";
+    top: 101%;
+    left: 50%;
+
+    width: 0;
+    height: 0;
+
+    border: $triangle-size solid $dark-blue-475;
+    border-top: none;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    transform: translateX(-50%);
+  }
+
+  &::after {
+    content: attr(data-tooltip);
+    top: calc(100% + #{$triangle-size});
+    left: 50%;
+
+    padding: 18px 20px;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: $white-400;
+
+    background-color: $dark-blue-475;
+    border-radius: 4px;
+    transform: translateX(-50%);
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      display: block;
+    }
+  }
+}

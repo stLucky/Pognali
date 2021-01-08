@@ -1,0 +1,281 @@
+.header {
+  background-color: $dark-blue-400;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+
+  @media #{$tablet} {
+    background-color: $dark-blue-375;
+  }
+
+  @media #{$desktop} {
+    background-color: $dark-blue-400;
+  }
+}
+
+.header--opened {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  .header__toggle {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 45%;
+      left: 15%;
+
+      width: 24px;
+      height: 2px;
+
+      background-color: $grey-400;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.header--opened,
+.header--nojs,
+.header--scroll {
+  width: 100%;
+
+  background-color: $white-400;
+
+  .header__logo-img {
+    &--white {
+      display: none;
+    }
+
+    &--blue {
+      display: block;
+    }
+  }
+
+  @media #{$tablet} {
+    padding: 45px 0;
+
+    .header__authorization-button {
+      margin: -47px 0 0;
+
+      font-weight: 400;
+      letter-spacing: 0.03em;
+    }
+  }
+}
+
+.header--opened,
+.header--nojs {
+  height: 100%;
+  overflow-y: scroll;
+
+  .header__logo-wrap {
+    order: 1;
+    margin: 0 0 69px;
+  }
+
+  .header__main-nav {
+    display: block;
+    order: 3;
+  }
+
+  .header__authorization-button {
+    display: inline-flex;
+  }
+
+  .header__contacts {
+    display: block;
+    order: 4;
+  }
+
+  .header__social {
+    display: flex;
+    order: 5;
+  }
+
+  @media #{$tablet} {
+    .header__logo-wrap {
+      align-self: flex-start;
+      margin: 0;
+    }
+  }
+}
+
+.header--nojs {
+  position: static;
+
+  .header__toggle {
+    display: none;
+  }
+}
+
+.header--scroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+
+  @media #{$desktop} {
+    padding: 46px 0 11px;
+
+    .header__authorization-button {
+      margin: 0;
+
+      font-weight: 700;
+      letter-spacing: normal;
+    }
+  }
+}
+
+.header__container {
+  @media #{$tablet} {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  @media #{$desktop} {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.header__wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.header__logo-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  @media #{$tablet} {
+    width: 53%;
+  }
+
+  @media #{$desktop} {
+    width: auto;
+    margin: 0 40px 0 0;
+  }
+}
+
+.header__logo-img {
+  &--blue {
+    display: none;
+  }
+
+  @media #{$tablet} {
+    width: 166px;
+    height: 42px;
+  }
+
+  @media #{$desktop} {
+    width: 200px;
+    height: 52px;
+  }
+}
+
+.header__toggle {
+  position: relative;
+
+  width: 35px;
+  height: 25px;
+
+  cursor: pointer;
+
+  $height: 3px;
+  $offset: 7px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - #{$offset + $height} / 2);
+
+    width: 25px;
+    height: $height;
+
+    background-color: $white-400;
+    border-radius: 1.5px;
+    box-shadow: 0 $offset 0 0 $white-400;
+  }
+
+  &--theme-smoke {
+    &::before {
+      background-color: $grey-400;
+      box-shadow: 0 $offset 0 0 $grey-400;
+    }
+  }
+
+  @media #{$desktop} {
+    display: none;
+  }
+}
+
+.header__main-nav {
+  display: none;
+  margin: 0 0 53px;
+
+  @media #{$tablet} {
+    margin: 60px 0 102px 56px;
+    padding: 30px 0;
+  }
+
+  @media #{$desktop} {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.header__authorization-button {
+  display: none;
+  margin: 0 0 51px;
+
+  @media #{$tablet} {
+    display: inline-flex;
+    order: 2;
+    align-self: flex-end;
+    width: 27%;
+    margin: -52px 0 0;
+  }
+
+  @media #{$desktop} {
+    align-self: auto;
+    width: 188px;
+    margin: 0;
+  }
+}
+
+.header__contacts {
+  display: none;
+  margin: 0 0 37px;
+
+  @media #{$tablet} {
+    margin: 0 0 125px 56px;
+  }
+
+  @media #{$desktop} {
+    display: flex;
+    margin: 0 0 0 auto;
+  }
+}
+
+.header__social {
+  display: none;
+
+  @media #{$tablet} {
+    margin: 0 0 0 70px;
+  }
+}

@@ -1,0 +1,141 @@
+$radius: 30px;
+
+.location__text-wrap {
+  position: relative;
+  z-index: 2;
+  background-color: $orange-400;
+  border-radius: 0 0 $radius $radius;
+
+  @media #{$tablet} {
+    $radius: 60px;
+
+    border-radius: 0 0 $radius $radius;
+  }
+}
+
+.location__text-inner {
+  padding: 31px 0 35px;
+
+  @media #{$tablet} {
+    padding: 48px 35px 84px 35px;
+  }
+
+  @media #{$desktop} {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 55px 75px 56px 224px;
+  }
+}
+
+.location__text {
+  display: flex;
+  align-items: center;
+  margin: 0 0 33px;
+
+  font-weight: 700;
+  line-height: 22px;
+  color: $dark-blue-300;
+  text-transform: uppercase;
+
+  &::before {
+    content: "";
+
+    flex-shrink: 0;
+    width: 45px;
+    height: 45px;
+    margin: 0 16px 0 0;
+
+    background: $dark-blue-450 url("../img/icon-location.svg") no-repeat center;
+    background-size: 21px 21px;
+    border-radius: 50%;
+  }
+
+  @media #{$tablet} {
+    margin: 0 0 44px;
+
+    font-size: 28px;
+    line-height: 28px;
+
+    &::before {
+      width: 68px;
+      height: 68px;
+      margin: 0 26px 0 0;
+
+      background-size: 32px 32px;
+    }
+  }
+
+  @media #{$desktop} {
+    margin: 0;
+
+    &::before {
+      width: 90px;
+      height: 90px;
+      margin: 0 31px 0 0;
+
+      background-size: 42px 42px;
+    }
+  }
+}
+
+.location__button {
+  padding: 19px;
+
+  font-weight: 700;
+
+  border: 3px solid $dark-blue-350;
+
+  @media #{$tablet} {
+    padding: 25px 33px;
+  }
+
+  @media #{$desktop} {
+    width: 324px;
+  }
+}
+
+.location__map {
+  position: relative;
+
+  height: 262px;
+
+  @media #{$tablet} {
+    height: 464px;
+  }
+
+  @media #{$desktop} {
+    height: 394px;
+  }
+}
+
+.location__map-content {
+  position: absolute;
+  width: 100%;
+  top: -30px;
+  bottom: -40px;
+
+  @media #{$tablet} {
+    top: -60px;
+    bottom: -60px;
+  }
+}
+
+.location__map-img {
+  position: absolute;
+  width: 100%;
+  top: -52px;
+  height: 424px;
+  object-fit: cover;
+
+  @media #{$tablet} {
+    top: -47px;
+    height: 581px;
+  }
+
+  @media #{$desktop} {
+    top: -123px;
+    height: 584px;
+  }
+}

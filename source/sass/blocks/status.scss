@@ -1,0 +1,34 @@
+.status {
+  position: relative;
+
+  &::before {
+    content: "";
+
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+
+    vertical-align: middle;
+
+    border-radius: 50%;
+  }
+
+  &--offline {
+    &::before {
+      background-color: $pink-400;
+    }
+  }
+
+  &--online {
+    &::before {
+      background-color: $lightgreen-400;
+    }
+  }
+
+  @media #{$tablet} {
+    &::before {
+      width: 8px;
+      height: 8px;
+    }
+  }
+}
