@@ -7,7 +7,6 @@
   justify-content: center;
   align-items: center;
 
-
   border-radius: 50%;
 }
 
@@ -76,6 +75,29 @@
     font-size: 18px;
     line-height: 18px;
     color: $grey-700;
+  }
+
+  @media #{$tablet} {
+    $level-size: 94px;
+
+    width: $level-size;
+    height: $level-size;
+
+    .level__svg {
+      width: $level-size;
+      height: $level-size;
+    }
+  }
+
+  @media #{$desktop} {
+    .level__number {
+      color: $white-400;
+      border-bottom: 1px solid rgba($white-400, 0.3);
+  }
+
+    .level__text {
+      color: $white-400;
+    }
   }
 }
 

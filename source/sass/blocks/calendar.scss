@@ -1,0 +1,215 @@
+$label-padding-desktop: 15px;
+
+.calendar__title-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 12px;
+  padding: 11px 0;
+
+  border-top: 1px solid $light-blue-350;
+  border-bottom: 1px solid $light-blue-350;
+
+  @media #{$tablet} {
+    margin: 0 0 31px;
+    padding: 24px 0;
+  }
+
+  @media #{$desktop} {
+    margin: 0;
+  }
+}
+
+.calendar__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+
+  @media #{$tablet} {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.calendar__title-button {
+  width: 15px;
+  height: 21px;
+
+  background: url("../img/arrow-back.svg") no-repeat center;
+  background-size: cover;
+
+  &--forward {
+    transform: rotate(180deg);
+  }
+
+  @media #{$tablet} {
+    width: 29px;
+    height: 36px;
+    margin: 0 0 0 14px;
+
+    &--forward {
+      margin: 0 14px 0 0;
+    }
+  }
+
+  @media #{$desktop} {
+    width: 35x;
+    height: 35px;
+    margin: 0;
+  }
+}
+
+.calendar__table {
+  width: 100%;
+
+  border-collapse: collapse;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+
+  @media #{$tablet} {
+    font-size: 18px;
+  }
+
+  @media #{$desktop} {
+    text-align: left;
+  }
+}
+
+.calendar__weekday {
+  padding: 8px 4px;
+
+  font-weight: 400;
+  color: $grey-700;
+
+  &--weekend {
+    color: $orange-900;
+  }
+
+  @media #{$tablet} {
+    padding: 18px;
+  }
+}
+
+.calendar__weekday-letter {
+  display: none;
+
+  @media #{$tablet} {
+    display: inline;
+  }
+}
+
+.calendar__table-body {
+  border: 1px solid $light-blue-350;
+}
+
+.calendar__week {
+  border-bottom: 1px solid $light-blue-350;
+
+  &:nth-child(6) {
+    border-bottom: none;
+  }
+}
+
+.calendar__number-day {
+  position: relative;
+
+  padding: 0;
+
+  border-right: 1px solid $light-blue-350;
+
+  &:nth-child(7) {
+    border-right: none;
+  }
+
+  &--disabled {
+    font-weight: 400;
+    color: rgba($grey-700, 0.3);
+
+    background-color: transparent;
+  }
+}
+
+.calendar__label {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 4px;
+
+  background-color: $grey-300;
+
+  @media #{$tablet} {
+    min-width: 76px;
+    min-height: 68px;
+    padding: 10px;
+  }
+
+  @media #{$desktop} {
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-width: 142px;
+    min-height: 70px;
+    padding: $label-padding-desktop;
+  }
+}
+
+.calendar__input:disabled + .calendar__label {
+  color: rgba($grey-700, 0.3);
+
+  background-color: transparent;
+}
+
+.calendar__input:checked + .calendar__label {
+  position: relative;
+
+  color: $white-400;
+
+  background-color: $dark-blue-300;
+
+  @media #{$desktop} {
+    &--arrival {
+      &::after {
+        content: "Заезд";
+        position: absolute;
+        bottom: $label-padding-desktop;
+        left: $label-padding-desktop;
+      }
+    }
+
+    &--departure {
+      &::after {
+        content: "Выезд";
+        position: absolute;
+        bottom: $label-padding-desktop;
+        left: $label-padding-desktop;
+      }
+    }
+  }
+}
+
+.calendar__input:focus + .calendar__label {
+  &::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+
+    border: 2px solid $orange-900;
+  }
+
+  @media #{$tablet} {
+    &::before {
+      top: -2px;
+      right: -2px;
+      bottom: -2px;
+      left: -2px;
+
+      border: 4px solid $orange-900;
+    }
+  }
+}

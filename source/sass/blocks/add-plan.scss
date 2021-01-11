@@ -1,0 +1,76 @@
+$radius: 30px;
+
+.add-plan {
+  position: relative;
+
+  color: $dark-blue-300;
+
+  background-color: $light-blue-500;
+  border-radius: $radius $radius 0 0;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: $radius;
+
+    background-color: $light-blue-400;
+  }
+
+  @media #{$desktop} {
+    $radius: 60px;
+
+    border-radius: $radius $radius 0 0;
+  }
+}
+
+.add-plan__inner {
+  padding: 30px 0 43px;
+
+  @media #{$tablet} {
+    padding: 53px 35px 63px;
+  }
+
+  @media #{$desktop} {
+    padding: 55px 0 70px;
+  }
+}
+
+.add-plan__title-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 30px;
+
+  @media #{$tablet} {
+    margin: 0 0 56px;
+  }
+
+  @media #{$desktop} {
+    margin: 0 0 54px 68px;
+  }
+}
+
+.add-plan__title {
+  margin: 0;
+}
+
+.add-plan__marks {
+  margin: 0 18px 0 0;
+
+  @media #{$desktop} {
+    display: none;
+  }
+}
+
+.add-plan__step {
+  margin: 0 0 10px;
+
+  &:last-of-type {
+    margin: 0;
+  }
+}

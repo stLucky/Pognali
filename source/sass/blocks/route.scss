@@ -1,0 +1,142 @@
+$border-width: 1px;
+$flag-wrap-width: 53px;
+$arrow-down-height: 10px;
+$arrow-down-offset: 6px;
+
+.route__button-select {
+  position: relative;
+
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 14px 11px 9px;
+  overflow: hidden;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: $dark-blue-300;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  white-space: nowrap;
+
+  background-color: transparent;
+  border: $border-width solid $grey-425;
+  border-radius: 4px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: $border-width;
+    right: $border-width;
+    bottom: $border-width;
+    left: calc(100% - 56px);
+
+    background-image: linear-gradient(to left, $white-400 75%, transparent);
+    border-radius: 0 4px 4px 0;
+  }
+
+  &::after {
+    content: "";
+    position: relative;
+    z-index: 1;
+
+    width: 11px;
+    height: 8px;
+
+    background: url("../img/arrow-select.svg") no-repeat;
+    background-size: cover;
+    opacity: 0.3;
+  }
+}
+
+.route__item {
+  position: relative;
+
+  display: flex;
+  margin: 0 0 calc(2 * #{$arrow-down-offset} + #{$arrow-down-height});
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(100% + #{$arrow-down-offset});
+    right: $flag-wrap-width;
+
+    width: 8px;
+    height: $arrow-down-height;
+
+    background: url("../img/arrow-down.svg") no-repeat;
+    background-size: cover;
+    transform: translateX(50%);
+  }
+}
+
+.route__flag-wrap {
+  position: relative;
+
+  width: $flag-wrap-width;
+  margin: 0 0 0 -#{$border-width};
+  padding: 8px;
+
+  border: 1px solid $grey-425;
+  border-radius: 4px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 8px;
+    height: 8px;
+
+    background-color: $dark-blue-300;
+    border-radius: 50%;
+    transform: translate(-55%, -55%);
+  }
+}
+
+.route__flag-tooltip {
+  width: 35px;
+  height: 24px;
+}
+
+.route__flag {
+  width: 100%;
+}
+
+.route__button-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 21px;
+  height: 21px;
+
+  background-color: $grey-300;
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 10px;
+    height: 1px;
+
+    background-color: $grey-500;
+    border-radius: 1px;
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}

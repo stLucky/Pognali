@@ -1,0 +1,89 @@
+$radius: 30px;
+$plans-offset-mobile: 11px;
+$plans-offset-desktop: 16px;
+
+.plans {
+  padding: 26px 0 30px;
+
+  background-color: $light-blue-400;
+  border-radius: $radius $radius 0 0;
+
+  @media #{$tablet} {
+    padding: 54px 0 76px;
+  }
+
+  @media #{$desktop} {
+    $radius: 60px;
+
+    padding: 51px 0 65px;
+
+    border-radius: $radius $radius 0 0;
+  }
+}
+
+.plans__inner {
+  @media #{$tablet} {
+    padding: 0 35px;
+  }
+
+  @media #{$desktop} {
+    padding: 0 0 0 64px;
+  }
+}
+
+.plans__title {
+  margin: 0 0 31px;
+
+  @media #{$tablet} {
+    margin: 0 0 51px;
+  }
+
+  @media #{$desktop} {
+    margin: 0 0 53px 5px;
+  }
+}
+
+.plans__list {
+  margin: 0 0 -#{$plans-offset-mobile};
+
+  counter-reset: plansItem;
+
+  @media #{$desktop} {
+    margin: 0 0 -#{$plans-offset-desktop};
+  }
+}
+
+.plans__item {
+  position: relative;
+
+  margin: 0 0 $plans-offset-mobile;
+
+  &::before {
+    content: counter(plansItem)".";
+
+    font-weight: 500;
+    line-height: 16px;
+
+    counter-increment: plansItem;
+  }
+
+  @media #{$tablet} {
+    &::before {
+      position: absolute;
+      top: 41px;
+      right: 32px;
+
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  @media #{$desktop} {
+    margin: 0 0 $plans-offset-desktop;
+
+    &::before {
+      position: static;
+      margin: 0 36px 0 0;
+    }
+  }
+}

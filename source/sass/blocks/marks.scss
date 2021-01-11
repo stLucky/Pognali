@@ -1,0 +1,59 @@
+.marks {
+  display: flex;
+}
+
+.marks--text-desc {
+  .marks__item {
+    display: flex;
+    align-items: center;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba($black-400, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.11em;
+    margin: 0 0 20px;
+
+    &::before {
+      margin: 0 36px 0 0;
+    }
+
+    &--current {
+      color: $black-400;
+    }
+  }
+  .marks__text {
+    display: inline;
+  }
+}
+
+
+.marks__item {
+  margin: 0 16px 0 0;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  &::before {
+    content: "";
+
+    display: block;
+    width: 5px;
+    height: 5px;
+
+    background-color: rgba($dark-blue-300, 0.3);
+    border-radius: 50%;
+  }
+
+  &--current {
+    &::before {
+      background-color: $dark-blue-300;
+    }
+  }
+}
+
+.marks__text {
+  display: none;
+}
