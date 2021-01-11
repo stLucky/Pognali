@@ -59,7 +59,7 @@ $plans-offset-desktop: 16px;
   margin: 0 0 $plans-offset-mobile;
 
   &::before {
-    content: counter(plansItem)".";
+    content: counter(plansItem) ".";
 
     font-weight: 500;
     line-height: 16px;

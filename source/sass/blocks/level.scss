@@ -11,15 +11,15 @@
 }
 
 .level--companion {
-  $level-size: 60px;
-  $stroke-width: 4px;
-
   width: $level-size;
   height: $level-size;
 
   color: $white-400;
 
   background-color: rgba($black-400, 0.6);
+
+  $level-size: 60px;
+  $stroke-width: 4px;
 
   .level__svg {
     width: $level-size;
@@ -45,13 +45,13 @@
 }
 
 .level--form {
-  $level-size: 100px;
-  $stroke-width: 2px;
-
   width: $level-size;
   height: $level-size;
 
   background-color: transparent;
+
+  $level-size: 100px;
+  $stroke-width: 2px;
 
   .level__svg {
     width: $level-size;
@@ -78,10 +78,10 @@
   }
 
   @media #{$tablet} {
-    $level-size: 94px;
-
     width: $level-size;
     height: $level-size;
+
+    $level-size: 94px;
 
     .level__svg {
       width: $level-size;
@@ -92,8 +92,9 @@
   @media #{$desktop} {
     .level__number {
       color: $white-400;
+
       border-bottom: 1px solid rgba($white-400, 0.3);
-  }
+    }
 
     .level__text {
       color: $white-400;

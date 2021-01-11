@@ -6,6 +6,7 @@
   .marks__item {
     display: flex;
     align-items: center;
+    margin: 0 0 20px;
 
     font-weight: 400;
     font-size: 20px;
@@ -13,7 +14,6 @@
     color: rgba($black-400, 0.6);
     text-transform: uppercase;
     letter-spacing: 0.11em;
-    margin: 0 0 20px;
 
     &::before {
       margin: 0 36px 0 0;
@@ -23,6 +23,7 @@
       color: $black-400;
     }
   }
+
   .marks__text {
     display: inline;
   }
