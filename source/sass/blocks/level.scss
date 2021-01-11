@@ -11,15 +11,14 @@
 }
 
 .level--companion {
+  $level-size: 60px;
+  $stroke-width: 4px;
   width: $level-size;
   height: $level-size;
 
   color: $white-400;
 
   background-color: rgba($black-400, 0.6);
-
-  $level-size: 60px;
-  $stroke-width: 4px;
 
   .level__svg {
     width: $level-size;
@@ -45,13 +44,13 @@
 }
 
 .level--form {
+  $level-size: 100px;
+  $stroke-width: 2px;
+
   width: $level-size;
   height: $level-size;
 
   background-color: transparent;
-
-  $level-size: 100px;
-  $stroke-width: 2px;
 
   .level__svg {
     width: $level-size;
