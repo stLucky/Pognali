@@ -1,0 +1,200 @@
+$flag-height-mobile: 24px;
+$flag-height-tablet: 47px;
+$flag-width-tablet: 70px;
+$textarea-margin-bottom-mobile: 23px;
+$textarea-margin-bottom-tablet: 44px;
+$textarea-margin-top-mobile: 14px;
+$textarea-margin-top-desktop: 30px;
+$textarea-padding-right-desktop: 155px;
+$point-tablet-size: 14px;
+$recreation-padding-right-desktop: 114px;
+
+.recreation__item {
+  position: relative;
+
+  margin: 0 0 $textarea-margin-bottom-mobile;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  &--scheme {
+    &::before {
+      content: "";
+      position: absolute;
+      top: calc(#{$flag-height-mobile} / 2 - 1px);
+      right: 100%;
+      bottom: calc(-#{$textarea-margin-bottom-mobile} - #{$flag-height-mobile} / 2 - 1px);
+      left: -14px;
+
+      border: 2px solid $dark-blue-300;
+      border-right: none;
+    }
+  }
+
+
+  @media #{$tablet} {
+    margin: 0 0 $textarea-margin-bottom-tablet;
+    padding: 0 33px 0 0;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+    }
+
+    &--scheme {
+      &::before {
+        top: $flag-height-tablet / 2;
+        right: $point-tablet-size / 2;
+        bottom: calc(-#{$textarea-margin-bottom-tablet} - #{$flag-height-tablet} / 2 - 1px);
+        left: unset;
+
+        width: 2px;
+
+        background-color: $dark-blue-300;
+        transform: translateX(50%);
+      }
+    }
+
+    &--point {
+      &::after {
+        top: $flag-height-tablet / 2;
+        right: 0;
+
+        width: $point-tablet-size;
+        height: $point-tablet-size;
+
+        background-color: $dark-blue-300;
+        border-radius: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  @media #{$desktop} {
+    padding: 0 $recreation-padding-right-desktop 0 0;
+
+    &--scheme {
+      &::before {
+        top: $flag-height-tablet / 2;
+        right: $recreation-padding-right-desktop + $flag-width-tablet + ($textarea-padding-right-desktop - $flag-width-tablet) / 2;
+        bottom: calc(-#{$textarea-margin-bottom-tablet} - #{$flag-height-tablet} / 2 - 1px);
+      }
+    }
+
+    &--point {
+      &::after {
+        right: $recreation-padding-right-desktop + $flag-width-tablet + ($textarea-padding-right-desktop - $flag-width-tablet) / 2;
+        transform: translate(50%, -50%);
+      }
+    }
+  }
+}
+
+.recreation__label-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 $textarea-margin-top-mobile;
+
+  @media #{$tablet} {
+    margin: 0 0 $textarea-margin-top-desktop;
+  }
+}
+
+.recreation__label {
+  position: relative;
+
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  width: 0;
+  overflow: hidden;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  white-space: nowrap;
+
+  &::before {
+    content: "";
+
+    flex-shrink: 0;
+    width: 6px;
+    height: 6px;
+    margin: 0 8px 0 0;
+
+    background-color: $dark-blue-300;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: calc(100% - 40px);
+
+    background-image: linear-gradient(to left, $white-400 40%, transparent);
+    border-radius: 0 4px 4px 0;
+  }
+
+  @media #{$tablet} {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.recreation__flag-tooltip {
+  @include flag-size($height: $flag-height-mobile);
+
+  @media #{$tablet} {
+    @include flag-size(70px, $flag-height-tablet);
+  }
+}
+
+.recreation__flag {
+  width: 100%;
+}
+
+.recreation__textarea-wrap {
+  @media #{$desktop} {
+    padding: 0 $textarea-padding-right-desktop 0 0;
+  }
+}
+
+.recreation__textarea {
+  width: 100%;
+  min-height: 220px;
+  padding: 10px 14px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  vertical-align: top;
+  color: $grey-700;
+
+  border: 1px solid $grey-425;
+  border-radius: 4px;
+
+  resize: none;
+
+  &::placeholder {
+    opacity: 0.3;
+  }
+
+  @media #{$tablet} {
+    min-height: 140px;
+    padding: 19px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}

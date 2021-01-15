@@ -77,10 +77,10 @@
   }
 
   @media #{$tablet} {
+    $level-size: 94px;
+
     width: $level-size;
     height: $level-size;
-
-    $level-size: 94px;
 
     .level__svg {
       width: $level-size;

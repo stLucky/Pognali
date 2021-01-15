@@ -29,7 +29,7 @@ $radius: 30px;
 }
 
 .add-plan__inner {
-  padding: 30px 0 43px;
+  padding: 30px 0 42px;
 
   @media #{$tablet} {
     padding: 53px 35px 63px;
@@ -62,6 +62,10 @@ $radius: 30px;
 .add-plan__marks {
   margin: 0 18px 0 0;
 
+  @media #{$tablet} {
+    margin: 0;
+  }
+
   @media #{$desktop} {
     display: none;
   }
@@ -72,5 +76,21 @@ $radius: 30px;
 
   &:last-of-type {
     margin: 0;
+  }
+
+  @media #{$tablet} {
+    margin: 0 0 39px;
+
+    &--special-margin {
+      margin: 0 0 51px;
+    }
+  }
+
+  @media #{$desktop} {
+    margin: 0 0 45px;
+
+    &--special-margin {
+      margin: 0 0 44px;
+    }
   }
 }

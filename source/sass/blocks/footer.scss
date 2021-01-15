@@ -1,8 +1,27 @@
 $radius: 30px;
 
 .footer {
+  position: relative;
+
   background-color: $white-400;
   border-radius: $radius $radius 0 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: $radius;
+  }
+
+  &--sublayer-dark {
+    &::before {
+      background-color: $light-blue-500;
+    }
+  }
 
   @media #{$tablet} {
     $radius: 60px;
@@ -94,6 +113,7 @@ $radius: 30px;
   @media #{$tablet} {
     justify-content: flex-start;
     margin: 0 0 3px;
+
     font-size: 20px;
     line-height: 20px;
 

@@ -78,7 +78,7 @@ $label-padding-desktop: 15px;
 }
 
 .calendar__weekday {
-  padding: 8px 4px;
+  padding: 8px 6px;
 
   font-weight: 400;
   color: $grey-700;
@@ -87,7 +87,7 @@ $label-padding-desktop: 15px;
     color: $orange-900;
   }
 
-  @media #{$tablet} {
+  @media #{$desktop} {
     padding: 18px;
   }
 }

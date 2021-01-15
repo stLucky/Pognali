@@ -1,53 +1,19 @@
 $border-width: 1px;
 $flag-wrap-width: 53px;
+$flag-offset-tablet: 25px;
+$flag-offset-desktop: 40px;
+$close-offset-tablet: 140px;
+$close-offset-desktop: 220px;
+$circle-width: 8px;
+$circle-width-tablet: 14px;
 $arrow-down-height: 10px;
 $arrow-down-offset: 6px;
 
-.route__button-select {
-  position: relative;
+.route {
+  padding: 0 0 calc(2 * #{$arrow-down-offset} + #{$arrow-down-height});
 
-  display: flex;
-  flex-grow: 1;
-  justify-content: space-between;
-  align-items: center;
-  padding: 11px 14px 11px 9px;
-  overflow: hidden;
-
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
-  color: $dark-blue-300;
-  text-transform: uppercase;
-  letter-spacing: 0.09em;
-  white-space: nowrap;
-
-  background-color: transparent;
-  border: $border-width solid $grey-425;
-  border-radius: 4px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: $border-width;
-    right: $border-width;
-    bottom: $border-width;
-    left: calc(100% - 56px);
-
-    background-image: linear-gradient(to left, $white-400 75%, transparent);
-    border-radius: 0 4px 4px 0;
-  }
-
-  &::after {
-    content: "";
-    position: relative;
-    z-index: 1;
-
-    width: 11px;
-    height: 8px;
-
-    background: url("../img/arrow-select.svg") no-repeat;
-    background-size: cover;
-    opacity: 0.3;
+  @media #{$tablet} {
+    padding: 0 0 11px;
   }
 }
 
@@ -55,7 +21,12 @@ $arrow-down-offset: 6px;
   position: relative;
 
   display: flex;
+  align-items: center;
   margin: 0 0 calc(2 * #{$arrow-down-offset} + #{$arrow-down-height});
+
+  &:last-child {
+    margin: 0;
+  }
 
   &::after {
     content: "";
@@ -69,6 +40,205 @@ $arrow-down-offset: 6px;
     background: url("../img/arrow-down.svg") no-repeat;
     background-size: cover;
     transform: translateX(50%);
+  }
+
+  &--add {
+    width: 100%;
+    margin: 0 0 26px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media #{$tablet} {
+    margin: 0 0 15px;
+    padding: 0 $flag-offset-tablet 0 0;
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+
+      width: $circle-width-tablet;
+      height: $circle-width-tablet;
+
+      border-radius: 50%;
+      transform: translate(50%, -73%);
+    }
+
+    &--selected {
+      &::before {
+        background-color: $dark-blue-300;
+      }
+    }
+
+    &--unselected {
+      &::before {
+        background-color: $white-400;
+        border: 1px solid $grey-425;
+      }
+    }
+
+    &--add {
+      &::before {
+        background-color: $grey-300;
+        border: 1px solid $grey-425;
+      }
+    }
+  }
+
+  @media #{$desktop} {
+    padding: 0 $flag-offset-desktop + 5px 0 0;
+  }
+}
+
+.route__button {
+  position: relative;
+
+  flex-grow: 1;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: $dark-blue-300;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+
+  border-radius: 4px;
+
+  &--select {
+    background-color: transparent;
+    border: $border-width solid $grey-425;
+
+
+    &::after {
+      content: "";
+      position: relative;
+      z-index: 1;
+
+      width: 11px;
+      height: 8px;
+
+      background: url("../img/arrow-select.svg") no-repeat;
+      background-size: cover;
+      opacity: 0.3;
+    }
+  }
+
+  &--selected {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 0;
+    padding: 11px 14px 11px 9px;
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: $border-width;
+      right: $border-width;
+      bottom: $border-width;
+      left: calc(100% - 56px);
+
+      background-image: linear-gradient(to left, $white-400 65%, transparent);
+      border-radius: 0 4px 4px 0;
+    }
+  }
+
+  &--unselected {
+    padding: 12px calc(#{$flag-wrap-width} + #{$circle-width} / 2) 11px 9px;
+
+    text-align: left;
+    letter-spacing: 0.1em;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: $flag-wrap-width;
+
+      width: $circle-width;
+      height: $circle-width;
+
+      background-image: none;
+      border: 1px solid $grey-425;
+      border-radius: 50%;
+      transform: translate(50%, -50%);
+    }
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 15px;
+
+      transform: translateY(-50%);
+    }
+  }
+
+  &--add {
+    background-color: $grey-300;
+    border: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 15px;
+
+      width: 14px;
+      height: 14px;
+
+      background: url("../img/icon_plus.svg") no-repeat;
+      background-size: cover;
+      transform: translateY(-50%);
+    }
+  }
+
+  @media #{$tablet} {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px 28px 23px 26px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    &--select {
+      &::after {
+        width: 16px;
+        height: 12px;
+      }
+    }
+
+    &--unselected {
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        position: relative;
+        top: 0;
+        right: 0;
+
+        transform: none;
+      }
+    }
+
+    &--add {
+      &::after {
+        width: 20px;
+        height: 20px;
+      }
+    }
   }
 }
 
@@ -88,18 +258,43 @@ $arrow-down-offset: 6px;
     top: 50%;
     left: 0;
 
-    width: 8px;
-    height: 8px;
+    width: $circle-width;
+    height: $circle-width;
 
     background-color: $dark-blue-300;
     border-radius: 50%;
     transform: translate(-55%, -55%);
   }
+
+  @media #{$tablet} {
+    position: absolute;
+    top: 50%;
+    left: calc(100% + #{$flag-offset-tablet} + 1px);
+
+    width: auto;
+    padding: 0;
+
+    border: none;
+    transform: translate(0, -50%);
+
+    $circle-width: 14px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @media #{$desktop} {
+    left: calc(100% + #{$flag-offset-desktop} + 1px);
+  }
 }
 
 .route__flag-tooltip {
-  width: 35px;
-  height: 24px;
+  @include flag-size;
+
+  @media #{$tablet} {
+    @include flag-size(70px, 47px);
+  }
 }
 
 .route__flag {
@@ -138,5 +333,31 @@ $arrow-down-offset: 6px;
 
   &::after {
     transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  @media #{$tablet} {
+    top: 50%;
+    right: -$close-offset-tablet;
+
+    width: 22px;
+    height: 24px;
+
+    background-color: unset;
+    border-radius: unset;
+    transform: translateY(-50%);
+
+    &::before,
+    &::after {
+      width: 24px;
+      height: 2px;
+
+      background-color: $black-400;
+      border-radius: 2px;
+      opacity: 0.1;
+    }
+  }
+
+  @media #{$desktop} {
+    right: -$close-offset-desktop;
   }
 }

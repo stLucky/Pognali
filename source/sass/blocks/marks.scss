@@ -53,6 +53,15 @@
       background-color: $dark-blue-300;
     }
   }
+
+  @media #{$tablet} {
+    margin: 0 29px 0 0;
+
+    &::before {
+      width: 6px;
+      height: 6px;
+    }
+  }
 }
 
 .marks__text {

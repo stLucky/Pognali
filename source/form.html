@@ -272,7 +272,7 @@
                 </li>
               </ol>
             </div>
-            <fieldset class="add-plan__step step">
+            <fieldset class="add-plan__step step" id="dates">
               <div class="step__header">
                 <legend class="step__title">
                   Шаг 1.<br> Даты пребывания
@@ -639,21 +639,21 @@
                 Следующий шаг
               </a>
             </fieldset>
-            <fieldset class="add-plan__step step" id="route">
-              <div class="step__header">
+            <fieldset class="add-plan__step add-plan__step--special-margin step step--special-padding" id="route">
+              <div class="step__header step__header--no-margin">
                 <legend class="step__title">
                   Шаг 2.<br> Маршрут
                 </legend>
-                <p class="step__desc">
-                  Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.
+                <p class="step__desc step__desc--no-margin step__desc--special-padding">
+                  Укажите страны, которые вы хотели бы посетить.<br> Это может быть одна или сразу несколько.
                 </p>
                 <ol class="step__marks marks marks--text-desc list">
-                  <li class="marks__item marks__item--current">
+                  <li class="marks__item">
                     <span class="marks__text">
                       Даты
                     </span>
                   </li>
-                  <li class="marks__item">
+                  <li class="marks__item marks__item--current">
                     <span class="marks__text">
                       Маршрут
                     </span>
@@ -665,1234 +665,1280 @@
                   </li>
                 </ol>
               </div>
-              <ol class="step__route route list">
-                <li class="route__item">
-                  <button class="route__button-select" type="button">
-                    Босния и Герцеговина
-                  </button>
-                  <div class="route__flag-wrap">
-                    <div class="route__flag-tooltip tooltip" data-tooltip="Босния и Герцеговина">
-                      <img class="route__flag" src="img/flag-bosnia.svg" alt="Флаг Боснии и Герцеговины" width="35" height="24">
+              <div class="step__route-wrap">
+                <ol class="step__route route list">
+                  <li class="route__item route__item--selected">
+                    <button class="route__button route__button--select route__button--selected" type="button">
+                      Босния и Герцеговина
+                    </button>
+                    <div class="route__flag-wrap">
+                      <div class="route__flag-tooltip tooltip" data-tooltip="Босния и Герцеговина">
+                        <img class="route__flag" src="img/flag-bosnia.svg" alt="Флаг Боснии и Герцеговины" width="35" height="24">
+                      </div>
                     </div>
-                  </div>
-                  <button class="route__button-close button" type="button" aria-label="Удалить страну"></button>
-                </li>
-                <li class="route__item">
-                  <button class="route__button-select" type="button">
-                    Чехия
-                  </button>
-                  <div class="route__flag-wrap tooltip" data-tooltip="Чехия">
-                    <img src="img/flag-czech.svg" alt="Флаг Чехии" width="35" height="24">
-                  </div>
-                  <button type="button" aria-label="Удалить страну"></button>
-                </li>
-                <li class="route__item">
-                  <button class="route__button-select" type="button">
-                    Выберите страну
-                  </button>
-                  <button type="button" aria-label="Удалить страну"></button>
-                  <ol>
-                    <li>
-                      <button type="button">
-                        А
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button">
-                        Б
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button">
-                        В
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button">
-                        Г
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button">
-                        Д
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button">
-                        Е
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button">
-                        З
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button">
-                        И
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button">
-                        К
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button">
-                        Л
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button">
-                        М
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button">
-                        Н
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button">
-                        О
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button">
-                        П
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button">
-                        Р
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button">
-                        С
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button">
-                        Т
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button">
-                        У
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button">
-                        Ф
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button">
-                        Х
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button">
-                        Ч
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button">
-                        Ш
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button">
-                        Э
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button">
-                        Ю
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button">
-                        Я
-                      </button>
-                    </li>
-                  </ol>
-                </li>
-                <ol>
-                  <li>
-                    <label for="">
-                      Австралия
-                    </label>
-                    <input type="radio" name="" id="">
+                    <button class="route__button-close button" type="button" aria-label="Удалить страну"></button>
                   </li>
-                  <li>
-                    <label for="">
-                      Австрия
-                    </label>
-                    <input type="radio" name="" id="">
+                  <li class="route__item route__item--selected">
+                    <button class="route__button route__button--select route__button--selected" type="button">
+                      Чехия
+                    </button>
+                    <div class="route__flag-wrap">
+                      <div class="route__flag-tooltip tooltip" data-tooltip="Чехия">
+                        <img class="route__flag" src="img/flag-czech.svg" alt="Флаг Чехии" width="35" height="24">
+                      </div>
+                    </div>
+                    <button class="route__button-close button" type="button" aria-label="Удалить страну"></button>
                   </li>
-                  <li>
-                    <label for="">
-                      Азербайджан
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Албания
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Алжир
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Ангола
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Андорра
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Антигуа и Барбуда
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Аргентина
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Армения
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Афганистан
-                    </label>
-                    <input type="radio" name="" id="">
+                  <li class="route__item route__item--unselected">
+                    <button class="route__button route__button--select route__button--unselected" type="button">
+                      Выберите страну
+                    </button>
+                    <button class="route__button-close button" type="button" aria-label="Удалить страну"></button>
+                    <div class="route__select-country select-country">
+                      <ol class="select-country__letters">
+                        <li class="select-country__letter">
+                          <button class="select-country__button"></button> type="button">
+                          А
+                          </button>
+                        </li>
+                        <li class="select-country__letter">
+                          <button class="select-country__button" type="button">
+                            Б
+                          </button>
+                        </li>
+                        <li class="select-country__letter">
+                          <button class="select-country__button" type="button">
+                            В
+                          </button>
+                        </li>
+                        <li class="select-country__letter">
+                          <button class="select-country__button" type="button">
+                            Г
+                          </button>
+                        </li>
+                        <li class="select-country__letter">
+                          <button class="select-country__button" type="button">
+                            Д
+                          </button>
+                        </li>
+                        <li class="select-country__letter">
+                          <button class="select-country__button" type="button">
+                            Е
+                          </button>
+                        </li>
+                        <li class="select-country__letter">
+                          <button class="select-country__button" type="button">
+                            З
+                          </button>
+                        </li>
+                        <li class="select-country__letter">
+                          <button class="select-country__button" type="button">
+                            И
+                          </button>
+                        </li>
+                        <li class="select-country__letter">
+                          <button class="select-country__button" type="button">
+                            К
+                          </button>
+                        </li>
+                        <li class="select-country__letter">
+                          <button class="select-country__button" type="button">
+                            Л
+                          </button>
+                        </li>
+                        <li class="select-country__letter">
+                          <button class="select-country__button" type="button">
+                            М
+                          </button>
+                        </li>
+                        <li class="select-country__letter">
+                          <button class="select-country__button" type="button">
+                            Н
+                          </button>
+                        </li>
+                        <li class="select-country__letter">
+                          <button class="select-country__button" type="button">
+                            О
+                          </button>
+                        </li>
+                        <li class="select-country__letter">
+                          <button class="select-country__button" type="button">
+                            П
+                          </button>
+                        </li>
+                        <li class="select-country__letter">
+                          <button class="select-country__button" type="button">
+                            Р
+                          </button>
+                        </li>
+                        <li class="select-country__letter">
+                          <button class="select-country__button" type="button">
+                            С
+                          </button>
+                        </li>
+                        <li class="select-country__letter">
+                          <button class="select-country__button" type="button">
+                            Т
+                          </button>
+                        </li>
+                        <li class="select-country__letter">
+                          <button class="select-country__button" type="button">
+                            У
+                          </button>
+                        </li>
+                        <li class="select-country__letter">
+                          <button class="select-country__button" type="button">
+                            Ф
+                          </button>
+                        </li>
+                        <li class="select-country__letter">
+                          <button class="select-country__button" type="button">
+                            Х
+                          </button>
+                        </li>
+                        <li class="select-country__letter">
+                          <button class="select-country__button" type="button">
+                            Ч
+                          </button>
+                        </li>
+                        <li class="select-country__letter">
+                          <button class="select-country__button" type="button">
+                            Ш
+                          </button>
+                        </li>
+                        <li class="select-country__letter">
+                          <button class="select-country__button" type="button">
+                            Э
+                          </button>
+                        </li>
+                        <li class="select-country__letter">
+                          <button class="select-country__button" type="button">
+                            Ю
+                          </button>
+                        </li>
+                        <li class="select-country__letter">
+                          <button class="select-country__button" type="button">
+                            Я
+                          </button>
+                        </li>
+                      </ol>
+                      <ol>
+                        <li>
+                          <label for="">
+                            Австралия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Австрия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Азербайджан
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Албания
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Алжир
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Ангола
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Андорра
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Антигуа и Барбуда
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Аргентина
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Армения
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Афганистан
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                      </ol>
+                      <ol>
+                        <li>
+                          <label for="">
+                            Багамские острова
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Бангладеш
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Барбадос
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Бахрейн
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Белоруссия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Белиз
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Бельгия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Бенин
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Болгария
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Боливия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Босния и Герцеговина
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Ботсвана
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Бразилия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Бруней
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Буркина-Фасо
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Бурунди
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Бутан
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                      </ol>
+                      <ol>
+                        <li>
+                          <label for="">
+                            Вануату
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Великобритания
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Венгрия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Венесуэла
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Восточный Тимор
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Вьетнам
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                      </ol>
+                      <ol>
+                        <li>
+                          <label for="">
+                            Габон
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Гаити
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Гайана
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Гамбия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Гана
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Гватемала
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Гвинея
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Гвинея-Бисау
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Германия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Гондурас
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Гренада
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Греция
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Грузия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                      </ol>
+                      <ol>
+                        <li>
+                          <label for="">
+                            Дания
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Джибути
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Доминика
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Доминикана
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                      </ol>
+                      <ol>
+                        <li>
+                          <label for="">
+                            Египет
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                      </ol>
+                      <ol>
+                        <li>
+                          <label for="">
+                            Замбия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Зимбабве
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                      </ol>
+                      <ol>
+                        <li>
+                          <label for="">
+                            Израиль
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Индия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Индонезия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Иордания
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Ирак
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Иран
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Ирландия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Исландия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Испания
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Италия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                      </ol>
+                      <ol>
+                        <li>
+                          <label for="">
+                            Кабо-Верде
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Казахстан
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Камбоджа
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Камерун
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Канада
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Катар
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Кения
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Кипр
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Киргизия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Кирибати
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Китай
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Колумбия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                      </ol>
+                      <ol>
+                        <li>
+                          <label for="">
+                            Лаос
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Латвия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Лесото
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Либерия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Ливан
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Ливия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Литва
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Лихтенштейн
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Люксембург
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                      </ol>
+                      <ol>
+                        <li>
+                          <label for="">
+                            Маврикий
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Мавритания
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Мадагаскар
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Малави
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Малайзия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Мали
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Мальдивы
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Мальта
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Марокко
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                      </ol>
+                      <ol>
+                        <li>
+                          <label for="">
+                            Намибия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Науру
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Непал
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Нигер
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Нигерия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Нидерланды
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Никарагуа
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Новая Зеландия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Норвегия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                      </ol>
+                      <ol>
+                        <li>
+                          <label for="">
+                            ОАЭ
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Оман
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                      </ol>
+                      <ol>
+                        <li>
+                          <label for="">
+                            Пакистан
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Палау
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Панама
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Папуа - Новая Гвинея
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Парагвай
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Перу
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Польша
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Португалия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                      </ol>
+                      <ol>
+                        <li>
+                          <label for="">
+                            Руанда
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Румыния
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Россия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                      </ol>
+                      <ol>
+                        <li>
+                          <label for="">
+                            Сальвадор
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Самоа
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Сан-Марино
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Саудовская Аравия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Сейшелы
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Сенегал
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Сербия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Сингапур
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Сирия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Словакия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Словения
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            США
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                      </ol>
+                      <ol>
+                        <li>
+                          <label for="">
+                            Таджикистан
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Таиланд
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Танзания
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Того
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Тонга
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Тринидад и Тобаго
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Тувалу
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Тунис
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Туркмения
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Турция
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                      </ol>
+                      <ol>
+                        <li>
+                          <label for="">
+                            Уганда
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Узбекистан
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Украина
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Уругвай
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                      </ol>
+                      <ol>
+                        <li>
+                          <label for="">
+                            Фиджи
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Филиппины
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Финляндия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Франция
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                      </ol>
+                      <ol>
+                        <li>
+                          <label for="">
+                            Хорватия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                      </ol>
+                      <ol>
+                        <li>
+                          <label for="">
+                            Чад
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Черногория
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Чехия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Чили
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                      </ol>
+                      <ol>
+                        <li>
+                          <label for="">
+                            Швейцария
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Швеция
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Шри-Ланка
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                      </ol>
+                      <ol>
+                        <li>
+                          <label for="">
+                            Эквадор
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Эритрея
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Эсватини
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Эстония
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Эфиопия
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                      </ol>
+                      <ol>
+                        <li>
+                          <label for="">
+                            ЮАР
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Южный Судан
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                      </ol>
+                      <ol>
+                        <li>
+                          <label for="">
+                            Ямайка
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                        <li>
+                          <label for="">
+                            Япония
+                          </label>
+                          <input type="radio" name="" id="">
+                        </li>
+                      </ol>
+                    </div>
                   </li>
                 </ol>
-                <ol>
-                  <li>
-                    <label for="">
-                      Багамские острова
-                    </label>
-                    <input type="radio" name="" id="">
+                <div class="route__item route__item--add">
+                  <button class="route__button route__button--unselected route__button--add">
+                    Добавить страну
+                  </button>
+                </div>
+              </div>
+              <div class="step__buttons-wrap">
+                <a class="step__button step__button--margin step__button--special-width button button--secondary button--theme-sun" href="form.html#recreation">
+                  Следующий шаг
+                </a>
+                <a class="step__button step__button--back button button--secondary" href="form.html#dates">
+                  На шаг назад
+                </a>
+              </div>
+            </fieldset>
+            <fieldset class="add-plan__step step step--special-padding" id="recreation">
+              <div class="step__header step__header--special-margin">
+                <legend class="step__title">
+                  Шаг 3.<br> Развлечения
+                </legend>
+                <p class="step__desc step__desc--special-padding step__desc--special-margin">
+                  Наконец, расскажите о своих планах времяпровождения.<br> Можно писать в свободной форме и ставить тэги.
+                </p>
+                <ol class="step__marks marks marks--text-desc list">
+                  <li class="marks__item">
+                    <span class="marks__text">
+                      Даты
+                    </span>
                   </li>
-                  <li>
-                    <label for="">
-                      Бангладеш
-                    </label>
-                    <input type="radio" name="" id="">
+                  <li class="marks__item">
+                    <span class="marks__text">
+                      Маршрут
+                    </span>
                   </li>
-                  <li>
-                    <label for="">
-                      Барбадос
-                    </label>
-                    <input type="radio" name="" id="">
+                  <li class="marks__item marks__item--current">
+                    <span class="marks__text">
+                      Развлечения
+                    </span>
                   </li>
-                  <li>
-                    <label for="">
-                      Бахрейн
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Белоруссия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Белиз
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Бельгия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Бенин
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Болгария
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Боливия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
+                </ol>
+              </div>
+              <ol class="step__recreation recreation list">
+                <li class="recreation__item recreation__item--scheme recreation__item--point">
+                  <div class="recreation__label-wrap">
+                    <label class="recreation__label" for="action-plan">
                       Босния и Герцеговина
                     </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Ботсвана
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Бразилия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Бруней
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Буркина-Фасо
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Бурунди
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Бутан
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                </ol>
-                <ol>
-                  <li>
-                    <label for="">
-                      Вануату
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Великобритания
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Венгрия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Венесуэла
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Восточный Тимор
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Вьетнам
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                </ol>
-                <ol>
-                  <li>
-                    <label for="">
-                      Габон
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Гаити
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Гайана
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Гамбия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Гана
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Гватемала
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Гвинея
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Гвинея-Бисау
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Германия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Гондурас
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Гренада
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Греция
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Грузия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                </ol>
-                <ol>
-                  <li>
-                    <label for="">
-                      Дания
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Джибути
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Доминика
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Доминикана
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                </ol>
-                <ol>
-                  <li>
-                    <label for="">
-                      Египет
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                </ol>
-                <ol>
-                  <li>
-                    <label for="">
-                      Замбия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Зимбабве
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                </ol>
-                <ol>
-                  <li>
-                    <label for="">
-                      Израиль
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Индия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Индонезия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Иордания
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Ирак
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Иран
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Ирландия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Исландия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Испания
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Италия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                </ol>
-                <ol>
-                  <li>
-                    <label for="">
-                      Кабо-Верде
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Казахстан
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Камбоджа
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Камерун
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Канада
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Катар
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Кения
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Кипр
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Киргизия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Кирибати
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Китай
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Колумбия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                </ol>
-                <ol>
-                  <li>
-                    <label for="">
-                      Лаос
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Латвия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Лесото
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Либерия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Ливан
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Ливия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Литва
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Лихтенштейн
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Люксембург
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                </ol>
-                <ol>
-                  <li>
-                    <label for="">
-                      Маврикий
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Мавритания
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Мадагаскар
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Малави
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Малайзия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Мали
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Мальдивы
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Мальта
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Марокко
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                </ol>
-                <ol>
-                  <li>
-                    <label for="">
-                      Намибия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Науру
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Непал
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Нигер
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Нигерия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Нидерланды
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Никарагуа
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Новая Зеландия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Норвегия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                </ol>
-                <ol>
-                  <li>
-                    <label for="">
-                      ОАЭ
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Оман
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                </ol>
-                <ol>
-                  <li>
-                    <label for="">
-                      Пакистан
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Палау
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Панама
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Папуа - Новая Гвинея
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Парагвай
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Перу
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Польша
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Португалия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                </ol>
-                <ol>
-                  <li>
-                    <label for="">
-                      Руанда
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Румыния
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Россия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                </ol>
-                <ol>
-                  <li>
-                    <label for="">
-                      Сальвадор
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Самоа
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Сан-Марино
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Саудовская Аравия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Сейшелы
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Сенегал
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Сербия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Сингапур
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Сирия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Словакия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Словения
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      США
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                </ol>
-                <ol>
-                  <li>
-                    <label for="">
-                      Таджикистан
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Таиланд
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Танзания
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Того
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Тонга
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Тринидад и Тобаго
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Тувалу
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Тунис
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Туркмения
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Турция
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                </ol>
-                <ol>
-                  <li>
-                    <label for="">
-                      Уганда
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Узбекистан
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Украина
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Уругвай
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                </ol>
-                <ol>
-                  <li>
-                    <label for="">
-                      Фиджи
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Филиппины
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Финляндия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Франция
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                </ol>
-                <ol>
-                  <li>
-                    <label for="">
-                      Хорватия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                </ol>
-                <ol>
-                  <li>
-                    <label for="">
-                      Чад
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Черногория
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
+                    <div class="recreation__flag-tooltip tooltip" data-tooltip="Босния и Герцеговина">
+                      <img class="recreation__flag" src="img/flag-bosnia.svg" alt="Флаг Боснии и Герцеговины" width="35" height="24">
+                    </div>
+                  </div>
+                  <div class="recreation__textarea-wrap">
+                    <textarea class="recreation__textarea" name="action-plan" id="action-plan" placeholder="План действий"></textarea>
+                  </div>
+                </li>
+                <li class="recreation__item recreation__item--point">
+                  <div class="recreation__label-wrap">
+                    <label class="recreation__label" for="action-plan">
                       Чехия
                     </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Чили
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                </ol>
-                <ol>
-                  <li>
-                    <label for="">
-                      Швейцария
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Швеция
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Шри-Ланка
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                </ol>
-                <ol>
-                  <li>
-                    <label for="">
-                      Эквадор
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Эритрея
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Эсватини
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Эстония
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Эфиопия
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                </ol>
-                <ol>
-                  <li>
-                    <label for="">
-                      ЮАР
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Южный Судан
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                </ol>
-                <ol>
-                  <li>
-                    <label for="">
-                      Ямайка
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                  <li>
-                    <label for="">
-                      Япония
-                    </label>
-                    <input type="radio" name="" id="">
-                  </li>
-                </ol>
-              </ol>
-              <a href="">
-                Следующий шаг
-              </a>
-              <a href="">
-                На шаг назад
-              </a>
-            </fieldset>
-            <fieldset>
-              <legend>
-                Шаг 3. Развлечения
-              </legend>
-              <p>
-                Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
-              </p>
-              <ol>
-                <li>
-                  <label for="">
-                    Босния и Герцеговина
-                  </label>
-                  <img src="img/flag-bosnia.svg" alt="Флаг Боснии и Герцеговины" width="35" height="24">
-                  <textarea name="" id="" placeholder="План действий"></textarea>
-                </li>
-                <li>
-                  <label for="">
-                    Чехия
-                  </label>
-                  <img src="img/flag-czech.svg" alt="Флаг Чехии" width="35" height="24">
-                  <textarea name="" id="" placeholder="План действий">
-                Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
-              </textarea>
+                    <div class="recreation__flag-tooltip tooltip" data-tooltip="Чехия">
+                      <img class="recreation__flag" src="img/flag-czech.svg" alt="Флаг Чехии" width="35" height="24">
+                    </div>
+                  </div>
+                  <div class="recreation__textarea-wrap">
+                    <textarea class="recreation__textarea" name="action-plan" id="action-plan"
+                      placeholder="План действий">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться&nbsp;архитектурой и вот это все.</textarea>
+                  </div>
                 </li>
               </ol>
-              <button type="submit">
-                Отправить
-              </button>
-              <a href="">
-                На шаг назад
-              </a>
+              <div class="step__buttons-wrap">
+                <button class="step__button step__button--margin step__button--stretched step__button--special-width button button--secondary button--theme-sun"
+                  type="submit">
+                  Отправить
+                </button>
+                <a class="step__button step__button--back button button--secondary" href="form.html#route">
+                  На шаг назад
+                </a>
+              </div>
             </fieldset>
           </div>
         </div>
       </section>
     </form>
   </main>
-  <footer class="footer">
+  <footer class="footer footer--sublayer-dark">
     <div class="container">
       <div class="footer__inner">
         <a class="footer__logo" href="index.html">

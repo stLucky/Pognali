@@ -23,3 +23,8 @@
     background-image: url("../img/smolov-back@2x.png");
   }
 }
+
+@mixin flag-size($width: 35px, $height: 24px) {
+  width: $width;
+  height: $height;
+}
