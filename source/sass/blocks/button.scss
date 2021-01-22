@@ -10,9 +10,23 @@
   background-color: transparent;
   border: none;
 
+  transition: all $transition-duration;
+
 
   &--theme-sun {
     background-color: $orange-400;
+
+    &:hover {
+      background-color: $orange-450;
+    }
+  }
+
+  &--theme-sky {
+    background-color: $light-blue-550;
+  }
+
+  &--theme-light {
+    background-color: $white-400;
   }
 
   &--primary {
@@ -39,6 +53,16 @@
       border-left: 12px solid $dark-blue-300;
     }
 
+
+    &:active {
+      color: rgba($dark-blue-300, 0.3);
+
+      &::after {
+        transition: all $transition-duration;
+        opacity: 0.3;
+      }
+    }
+
     @media #{$tablet} {
       padding: 28px 33px;
 
@@ -59,6 +83,10 @@
     text-transform: uppercase;
 
     border-radius: 25px;
+
+    &:active {
+      color: rgba($dark-blue-400, 0.3);
+    }
 
     @media #{$tablet} {
       padding: 15px 25px;

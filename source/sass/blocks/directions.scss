@@ -160,11 +160,11 @@ $radius: 30px;
 }
 
 .directions__item {
+  position: relative;
+
   margin: 0 0 11px;
 
   &:last-child {
-    position: relative;
-
     margin: 0;
 
     @media #{$desktop} {

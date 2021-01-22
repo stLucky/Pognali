@@ -86,6 +86,7 @@ $recreation-padding-right-desktop: 114px;
     &--point {
       &::after {
         right: $recreation-padding-right-desktop + $flag-width-tablet + ($textarea-padding-right-desktop - $flag-width-tablet) / 2;
+
         transform: translate(50%, -50%);
       }
     }
@@ -165,6 +166,8 @@ $recreation-padding-right-desktop: 114px;
 }
 
 .recreation__textarea-wrap {
+  position: relative;
+
   @media #{$desktop} {
     padding: 0 $textarea-padding-right-desktop 0 0;
   }
@@ -184,10 +187,26 @@ $recreation-padding-right-desktop: 114px;
   border: 1px solid $grey-425;
   border-radius: 4px;
 
+  transition: all $transition-duration;
+
   resize: none;
 
   &::placeholder {
     opacity: 0.3;
+  }
+
+  &:hover {
+    border-color: $grey-600;
+  }
+
+  &:active,
+  &:focus {
+    border-color: $dark-blue-400;
+    outline: none;
+  }
+
+  &--error {
+    border-color: $pink-350;
   }
 
   @media #{$tablet} {
@@ -196,5 +215,27 @@ $recreation-padding-right-desktop: 114px;
 
     font-size: 20px;
     line-height: 20px;
+  }
+}
+
+.recreation__error {
+  position: absolute;
+  right: 1px;
+  bottom: 1px;
+  left: 1px;
+
+  display: none;
+  padding: 20px 20px 16px;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  color: $red-400;
+
+  background-color: $pink-250;
+  border-radius: 0 0 4px 4px;
+
+  &--show {
+    display: block;
   }
 }

@@ -1,9 +1,8 @@
 .status {
   position: relative;
 
-  &::before {
-    content: "";
-
+  &::before,
+  &::after {
     display: inline-block;
     width: 6px;
     height: 6px;
@@ -13,22 +12,65 @@
     border-radius: 50%;
   }
 
-  &--offline {
+  &--left {
     &::before {
+      content: "";
+    }
+  }
+
+  &--right {
+    &::after {
+      content: "";
+    }
+  }
+
+  &--offline {
+    &::before,
+    &::after {
       background-color: $pink-400;
     }
   }
 
   &--online {
-    &::before {
+    &::before,
+    &::after {
       background-color: $lightgreen-400;
     }
   }
 
   @media #{$tablet} {
-    &::before {
+    &::before,
+    &::after {
       width: 8px;
       height: 8px;
+    }
+  }
+}
+
+.status--card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &::after {
+    margin: 9px 2px 0 0;
+  }
+
+  @media #{$tablet} {
+    &::after {
+      margin: 0;
+
+      transform: translateY(50%);
+    }
+  }
+
+  @media #{$desktop} {
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      content: "";
     }
   }
 }

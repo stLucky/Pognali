@@ -7,11 +7,37 @@ $desktop-height-background: 50px;
 
 .contacts--header {
   .contacts__link {
+    transition: color 100ms;
+
+    &:hover {
+      color: rgba($dark-blue-350, 0.6);
+
+      .contacts__icon {
+        color: $orange-450;
+
+        transition: color 100ms;
+      }
+    }
+
+    &:active {
+      color: rgba($dark-blue-350, 0.3);
+
+      .contacts__icon {
+        color: $orange-450;
+
+        opacity: 0.3;
+
+        transition: all 100ms;
+      }
+    }
+
     @media #{$desktop} {
       &::before {
         width: $desktop-width-background;
         height: $desktop-height-background;
         margin: 0;
+
+        transition: all 100ms;
       }
 
       &::after {
@@ -21,6 +47,15 @@ $desktop-height-background: 50px;
         left: 50%;
 
         transform: translate(-50%, -50%);
+      }
+
+      &:active {
+        transition: all 100ms;
+
+        &::before,
+        &::after {
+          opacity: 0.3;
+        }
       }
 
       &--tel {
@@ -33,6 +68,12 @@ $desktop-height-background: 50px;
           height: 18px;
 
           background-image: url("../img/icon-telephone-2.svg");
+        }
+
+        &:hover {
+          &::before {
+            background-color: $orange-800;
+          }
         }
       }
 
@@ -47,6 +88,12 @@ $desktop-height-background: 50px;
 
           background-image: url("../img/icon-mail-2.svg");
         }
+
+        &:hover {
+          &::before {
+            background-color: $orange-700;
+          }
+        }
       }
     }
   }
@@ -59,6 +106,28 @@ $desktop-height-background: 50px;
 }
 
 .contacts--registration {
+  .contacts__link {
+    transition: all $transition-duration;
+
+    &:hover {
+      color: $orange-450;
+
+      .contacts__icon {
+        transition: all $transition-duration;
+        color: $orange-450;
+      }
+    }
+
+    &:active {
+      color: rgba($orange-450, 0.3);
+
+      .contacts__icon {
+        transition: all $transition-duration;
+        color: rgba($orange-450, 0.3);
+      }
+    }
+  }
+
   @media #{$desktop} {
     display: flex;
     justify-content: center;
@@ -100,6 +169,8 @@ $desktop-height-background: 50px;
 
   display: flex;
   align-items: center;
+  width: max-content;
+  // padding: 0 20px 0 0;
 
   font-weight: 700;
   font-size: 16px;

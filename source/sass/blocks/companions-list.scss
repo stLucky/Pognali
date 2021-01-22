@@ -1,0 +1,114 @@
+
+
+.companions-list__cards {
+  margin: 0 0 8px;
+
+  @media (min-width: 550px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+  }
+
+  @media #{$tablet} {
+    display: block;
+    margin: 0 0 36px;
+  }
+
+  @media #{$desktop} {
+    margin: 0 0 53px;
+  }
+}
+
+.companions-list__card {
+  margin: 0 0 10px;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  @media (min-width: 550px) {
+    flex-grow: 1;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    &:last-child {
+      margin: 10px;
+    }
+  }
+
+  @media #{$tablet} {
+    display: block;
+    margin: 0 0 40px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  @media #{$desktop} {
+    margin: 0 0 30px;
+  }
+}
+
+.companions-list__show-more {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  margin: 0 auto 10px;
+  padding: 10px 20px;
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 30px;
+  color: $dark-blue-300;
+  text-transform: uppercase;
+
+  &::before {
+    content: "";
+
+    width: 18px;
+    height: 18px;
+    margin: 0 15px 0 0;
+
+    background: url("../img/icon-plus_more.svg") no-repeat;
+    background-size: cover;
+
+    transition: all $transition-duration;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    &::before {
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: 550px) {
+    margin: 8px auto 10px;
+  }
+
+  @media #{$tablet} {
+    margin: 0 auto 41px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    &::before {
+      width: 26px;
+      height: 26px;
+      margin: 0 25px 0 0;
+    }
+  }
+
+  @media #{$tablet} {
+    margin: 0 auto 62px;
+  }
+}

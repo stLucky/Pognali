@@ -21,12 +21,47 @@
 .transport--form {
   justify-content: center;
 
-  .transport__item {
+  .transport__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 32px;
     height: 32px;
 
+    color: $grey-375;
+
     background-color: $white-400;
     border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .transport__input:checked + .transport__label {
+    color: $dark-blue-300;
+  }
+
+  .transport__label:hover {
+    color: $grey-450;
+  }
+
+  .transport__label:active {
+    color: rgba($dark-blue-300, 0.1);
+  }
+
+  .transport__input:focus + .transport__label {
+    box-shadow: 0 2px 6px rgba($dark-blue-400, 0.7);
+  }
+
+  .transport__input:checked + .transport__label:hover {
+    color: rgba($dark-blue-300, 0.7);
+
+    box-shadow: 0 2px 6px rgba($dark-blue-400, 0.17);
+  }
+
+  .transport__input:checked + .transport__label:active {
+    color: rgba($dark-blue-300, 0.3);
+
+    background-color: $grey-350;
+    box-shadow: none;
   }
 
   .transport__svg {
@@ -35,7 +70,7 @@
   }
 
   @media #{$tablet} {
-    .transport__item {
+    .transport__label {
       width: 43px;
       height: 43px;
     }
@@ -43,6 +78,67 @@
     .transport__svg {
       width: 23px;
       height: 22px;
+    }
+  }
+}
+
+.transport--card {
+  .transport__item {
+    width: 32px;
+    height: 32px;
+    margin: 0 1px 0 0;
+
+    background-color: $grey-300;
+    border-radius: 50%;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  @media #{$tablet} {
+    flex-direction: column;
+
+    .transport__item {
+      width: unset;
+      height: unset;
+      margin: 0 0 9px;
+
+      background-color: transparent;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    .transport__svg {
+      &--plane {
+        width: 25px;
+        height: 25px;
+      }
+
+      &--bus {
+        width: 19px;
+        height: 20px;
+      }
+
+      &--bicycle {
+        width: 26px;
+        height: 25px;
+      }
+
+      &--run {
+        width: 27px;
+        height: 24px;
+      }
+    }
+  }
+
+  @media #{$desktop} {
+    flex-direction: row;
+
+    .transport__item {
+      margin: 0 9px 0 0;
     }
   }
 }
@@ -58,6 +154,20 @@
 
   &--inactive {
     color: rgba($dark-blue-300, 0.15);
+  }
+
+  &--margin {
+    margin: 0 1px 0 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  @media #{$tablet} {
+    &--margin {
+      margin: 0 2px 0 0;
+    }
   }
 }
 

@@ -1,0 +1,139 @@
+.pagination {
+  @media #{$tablet} {
+    display: flex;
+    padding: 25px 17px 25px 28px;
+
+    background-color: $white-400;
+    border-radius: 20px;
+  }
+
+  @media #{$desktop} {
+    padding: 25px 23px 25px 28px;
+  }
+}
+
+.pagination__list {
+  display: none;
+
+  @media #{$tablet} {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.pagination__item {
+  @media #{$tablet} {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    &--current {
+      background-color: $orange-400;
+    }
+  }
+}
+
+.pagination__item--current {
+  .pagination__link {
+    width: 100%;
+    height: 100%;
+
+    cursor: initial;
+  }
+}
+
+.pagination__item:not(.pagination__item--current) {
+  .pagination__link {
+    transition: all $transition-duration;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+.pagination__link {
+  @media #{$tablet} {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: $dark-blue-300;
+  }
+}
+
+.pagination__switches {
+  display: flex;
+  min-height: 51px;
+
+  @media #{$tablet} {
+    min-width: 90px;
+    min-height: 20px;
+    margin: 0 0 0 auto;
+  }
+}
+
+.pagination__switche {
+  flex-grow: 1;
+
+  border-right: 1px solid $grey-300;
+
+  &--next {
+    border: none;
+  }
+
+  @media #{$tablet} {
+    border: none;
+  }
+}
+
+.pagination__switche-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  background-color: $white-400;
+  border-radius: 20px 0 0 20px;
+
+  &:not(.pagination__switche-link--disabled) {
+    transition: all $transition-duration;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &::before {
+    content: "";
+
+    border-top: 9px solid transparent;
+    border-right: 9px solid $dark-blue-300;
+    border-bottom: 9px solid transparent;
+    border-left: none;
+  }
+
+  &--disabled {
+    &::before {
+      opacity: 0.3;
+    }
+  }
+
+  &--next {
+    transform: rotate(180deg);
+  }
+}

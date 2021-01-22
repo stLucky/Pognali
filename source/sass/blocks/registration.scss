@@ -100,6 +100,16 @@ $radius: 30px;
   text-decoration-thickness: 1px;
   text-underline-offset: 1px;
 
+  transition: all $transition-duration;
+
+  &:hover {
+    color: $orange-700;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media #{$tablet} {
     text-underline-offset: 3px;
   }
@@ -138,6 +148,29 @@ $radius: 30px;
 
   &::placeholder {
     color: rgba($grey-700, 0.3);
+  }
+
+  &:hover {
+    background-color: $grey-300;
+
+    &::placeholder {
+      color: rgba($grey-700, 0.5);
+    }
+  }
+
+  &:focus {
+    outline: none;
+    background-color: transparent;
+    border: 4px solid $white-400;
+    color: $white-400;
+
+    &::placeholder {
+      color: $light-blue-350;
+    }
+  }
+
+  &--error {
+    color: $red-400;
   }
 
   @media #{$tablet} {

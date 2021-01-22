@@ -1,5 +1,6 @@
 const header = document.querySelector(".header");
 const mainNav = document.querySelector(".main-nav");
+const mainPage = document.querySelector(".main");
 const headerToggle = document.querySelector(".header__toggle");
 const toogleText = headerToggle.querySelector(".visually-hidden");
 
@@ -22,6 +23,7 @@ headerToggle.addEventListener("click", function () {
 });
 
 header.classList.remove("header--nojs");
+mainPage.classList.remove("main--nojs");
 
 window.addEventListener("scroll", function () {
   header.classList.add("header--scroll");

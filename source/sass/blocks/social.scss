@@ -8,6 +8,18 @@
   }
 }
 
+.social--header {
+  .social__link {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
 .social--footer {
   .social__item {
     margin: 0;
@@ -20,6 +32,17 @@
     background-color: $orange-400;
     border-radius: 50%;
 
+    &:hover {
+      background-color: $orange-450;
+    }
+
+    &:active {
+      &::before {
+        transition: all $transition-duration;
+        opacity: 0.3;
+      }
+    }
+
     @media #{$tablet} {
       width: 62px;
       height: 62px;
@@ -27,7 +50,7 @@
       &--fb {
         &::before {
           width: 14px;
-          height: 26px;
+          height: 28px;
         }
       }
 
@@ -68,6 +91,8 @@
   align-items: center;
   width: 30px;
   height: 30px;
+
+  transition: all $transition-duration;
 
   &::before {
     content: "";

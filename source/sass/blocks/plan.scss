@@ -116,6 +116,16 @@ $right-offset-tablet: 48px;
   text-transform: uppercase;
   letter-spacing: 0.03em;
 
+  transition: all $transition-duration;
+
+  &:hover {
+    color: rgba($black-400, 0.6);
+  }
+
+  &:active {
+    color: rgba($black-400, 0.1);
+  }
+
   @media #{$tablet} {
     margin: 0 -10px 0 auto;
 

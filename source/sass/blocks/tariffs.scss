@@ -1,0 +1,129 @@
+$radius-mobile: 20px;
+
+.tariffs {
+  position: fixed;
+  z-index: 10;
+  top: calc(50% + #{$spacer-mobile} / 2);
+
+  left: 20px;
+  right: 20px;
+
+  display: none;
+  min-width: 270px;
+  max-width: 400px;
+  max-height: 100%;
+  overflow: auto;
+  margin: auto;
+
+  background-color: $white-400;
+  border-radius: $radius-mobile;
+  box-shadow: 0 2px 8px rgba($dark-blue-300, 0.14);
+
+  transform: translate(0, -50%);
+
+  &--show {
+    display: block;
+  }
+
+  @media #{$tablet} {
+    top: calc(50% + #{$spacer-tablet});
+    left: 40px;
+    right: 40px;
+    max-width: 700px;
+  }
+
+  @media #{$desktop} {
+    top: calc(50% + #{$spacer-desktop} / 2);
+    left: 50%;
+
+    max-width: 750px;
+    min-height: 526px;
+    margin: 0;
+
+    transform: translate(-50%, -50%);
+  }
+}
+
+.tariffs__inner {
+  padding: 34px 25px;
+
+  @media #{$tablet} {
+    padding: 54px 90px;
+  }
+
+  @media #{$desktop} {
+    padding: 54px 60px;
+  }
+}
+
+.tariffs__title {
+  margin: 0 0 28px;
+
+  text-align: center;
+
+  @media #{$tablet} {
+    margin: 0 0 47px;
+  }
+}
+
+.tariffs__list {
+  margin: 0;
+}
+
+.tariffs__item {
+  padding: 11px 0;
+
+  line-height: 22px;
+  color: $grey-700;
+
+  border-bottom: 1px solid rgba($black-400, 0.05);
+
+  &:first-child {
+    border-top: 1px solid rgba($black-400, 0.05);
+  }
+
+  @media #{$tablet} {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 14px;
+
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+.tariffs__desc {
+  margin: 0;
+}
+
+.tariffs__button {
+  width: 100%;
+  padding: 21px;
+
+  font-weight: 700;
+  line-height: 24px;
+  color: $dark-blue-300;
+  text-transform: uppercase;
+
+  background-color: $light-blue-300;
+  border-radius: 0 0 $radius-mobile $radius-mobile;
+
+  cursor: pointer;
+
+  &:hover {
+    color: rgba($dark-blue-300, 0.7);
+    background-color: darken($light-blue-300, 2%);
+  }
+
+  &:active {
+    color: rgba($dark-blue-300, 0.4);
+    background-color: darken($light-blue-300, 5%);
+  }
+
+  @media #{$tablet} {
+    font-size: 24px;
+    text-transform: initial;
+    padding: 41px;
+  }
+}

@@ -13,6 +13,7 @@
 .level--companion {
   $level-size: 60px;
   $stroke-width: 4px;
+
   width: $level-size;
   height: $level-size;
 
@@ -97,6 +98,56 @@
 
     .level__text {
       color: $white-400;
+    }
+  }
+}
+
+.level--card {
+  $level-size: 45px;
+  $stroke-width: 3px;
+
+  width: $level-size;
+  height: $level-size;
+
+  .level__svg {
+    width: $level-size;
+    height: $level-size;
+
+    stroke-linecap: round;
+    stroke-width: $stroke-width;
+  }
+
+  .level__number {
+    font-size: 24px;
+    line-height: 24px;
+    color: $dark-blue-300;
+  }
+
+  .level__text {
+    display: none;
+  }
+
+  @media #{$tablet} {
+    $level-size: 62px;
+
+    width: $level-size;
+    height: $level-size;
+
+    .level__svg {
+      width: $level-size;
+      height: $level-size;
+    }
+
+    .level__number {
+      border-bottom: 1px solid rgba($black-400, 0.1);
+    }
+
+    .level__text {
+      display: block;
+
+      font-size: 14px;
+      line-height: 14px;
+      color: rgba($black-400, 0.4);
     }
   }
 }

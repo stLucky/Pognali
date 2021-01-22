@@ -188,6 +188,10 @@
   font-size: 15px;
   line-height: 15px;
 
+  cursor: pointer;
+
+  transition: all $transition-duration;
+
   &::before {
     content: "";
 
@@ -197,6 +201,23 @@
 
     border: 1px solid $grey-425;
     border-radius: 4px;
+  }
+
+  &:hover {
+    color: rgba($dark-blue-300, 0.6);
+
+    &::before {
+      border-color: $grey-600;
+    }
+  }
+
+  &:active {
+    color: rgba($dark-blue-300, 0.3);
+
+    &::before {
+      background-color: $grey-350;
+      border: none;
+    }
   }
 
   @media #{$tablet} {
@@ -238,6 +259,33 @@
   }
 }
 
+.step__checkbox-input:checked + .step__checkbox-label {
+  &:hover {
+    &::before {
+      border-color: $grey-600;
+
+      transition: all $transition-duration;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: $grey-350;
+      border: none;
+
+      transition: all $transition-duration;
+    }
+  }
+}
+
+.step__checkbox-input:focus + .step__checkbox-label {
+  color: rgba($dark-blue-300, 0.6);
+
+  &::before {
+    border-color: $grey-600;
+  }
+}
+
 .step__calendar {
   width: 100%;
   margin: 0 0 24px;
@@ -263,6 +311,22 @@
 
 .step__button {
   color: $dark-blue-300;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: $orange-450;
+  }
+
+  &:active {
+    color: rgba($dark-blue-300, 0.3);
+
+    &::after {
+      opacity: 0.3;
+
+      transition: all $transition-duration;
+    }
+  }
 
   &--margin {
     margin: 0 0 6px;
@@ -302,12 +366,21 @@
     }
 
     &--back {
-      width: 192px;
       flex-direction: row-reverse;
+      width: 192px;
       padding: 20px 0 20px 10px;
 
       &::after {
         transform: rotate(180deg);
+      }
+
+      &:hover {
+        background-color: unset;
+        opacity: 0.7;
+      }
+
+      &:active {
+        opacity: 0.5;
       }
     }
 
@@ -329,8 +402,8 @@
   width: 100%;
   margin: 0 0 25px;
 
-  $right-padding-tablet: 138px;
   $right-padding-desktop: 226px;
+  $right-padding-tablet: 138px;
 
   @media #{$tablet} {
     position: relative;
@@ -342,18 +415,21 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: 0;
-      width: 1px;
       right: $right-padding-tablet - 1px;
+      bottom: 0;
+
+      width: 1px;
     }
 
     &::before {
       top: 0;
+
       background-color: $grey-275;
     }
 
     &::after {
       height: 70px;
+
       background-image: linear-gradient(to top, $white-400, transparent 70%);
     }
   }
@@ -384,7 +460,7 @@
     margin: 0 0 49px;
   }
 
-  @media #{$tablet} {
+  @media #{$desktop} {
     margin: 0 0 56px;
   }
 }

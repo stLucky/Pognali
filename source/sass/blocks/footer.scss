@@ -51,6 +51,15 @@ $radius: 30px;
 .footer__logo {
   display: inline-block;
   margin: 0 0 37px;
+  transition: all $transition-duration;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media #{$tablet} {
     margin: 0;
@@ -85,7 +94,7 @@ $radius: 30px;
     padding: 0;
   }
 
-  @media #{$tablet} {
+  @media #{$desktop} {
     margin: 0 45px 0 0;
   }
 }
@@ -99,15 +108,25 @@ $radius: 30px;
   line-height: 16px;
   color: $grey-700;
 
+  transition: all $transition-duration;
+
   &::after {
     content: "";
 
-    width: 27px;
-    height: 33px;
+    width: 29px;
+    height: 35px;
 
     background-image: url("../img/icon-logo-html.svg");
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   @media #{$tablet} {

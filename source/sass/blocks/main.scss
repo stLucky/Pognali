@@ -1,11 +1,10 @@
-$spacer-mobile: 91px;
-$spacer-tablet: 159px;
-$spacer-desktop: 105px;
+
 $radius: 20px;
 
 .main {
   position: relative;
 
+  flex-grow: 1;
   padding: $spacer-mobile 0 0;
 
   &::before {
@@ -38,12 +37,35 @@ $radius: 20px;
 
       background-color: $dark-blue-350;
     }
+
+    &--nojs {
+      &::before {
+        display: none;
+      }
+    }
   }
 }
 
 .main__title-wrap {
   background-color: $dark-blue-400;
   border-radius: 0 0 $radius $radius;
+
+  &--sublayer {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+
+      width: 100%;
+      height: $radius;
+
+      background-color: $grey-350;
+    }
+  }
 
   @media #{$tablet} {
     $radius: 60px;
@@ -52,6 +74,12 @@ $radius: 20px;
 
     background-color: $dark-blue-375;
     border-radius: 0 0 $radius $radius;
+
+    &--sublayer {
+      &::before {
+        height: $radius;
+      }
+    }
   }
 
   @media #{$desktop} {
@@ -63,6 +91,7 @@ $radius: 20px;
 
 .main__title {
   position: relative;
+  z-index: 11;
 
   display: inline-block;
   margin: 0;
@@ -73,6 +102,7 @@ $radius: 20px;
     position: absolute;
     bottom: 0;
     left: 0;
+    z-index: 1;
 
     width: 100%;
     height: 5px;
@@ -92,12 +122,143 @@ $radius: 20px;
   }
 
   @media #{$desktop} {
-    margin: 0 0 0 64px;
-    padding: 0 0 70px;
     max-width: 70%;
+    margin: 0 0 0 64px;
+    padding: 0 0 68px;
 
     &::before {
       height: 8px;
     }
+  }
+}
+
+.main__title-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__link {
+  display: none;
+  transition: all $transition-duration;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media #{$tablet} {
+    display: flex;
+    align-self: flex-start;
+    margin: 27px 34px 0 0;
+
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    color: $white-400;
+    text-transform: uppercase;
+
+    &::after {
+      content: "";
+
+      flex-shrink: 0;
+      width: 32px;
+      height: 16px;
+      margin: 0 0 0 28px;
+
+      background: url("../img/icon-arrow-bend.svg") no-repeat;
+      background-size: cover;
+    }
+  }
+
+  @media #{$desktop} {
+    margin: 31px 62px 0 0;
+  }
+}
+
+.main__filter-wrap {
+  &--open,
+  &--nojs {
+    position: relative;
+
+    width: 100%;
+    min-height: 55px;
+  }
+
+  @media #{$tablet} {
+    min-height: 139px;
+  }
+
+  @media #{$desktop} {
+    min-height: unset;
+    margin: 0 0 75px;
+  }
+}
+
+.main__filter-inner {
+  &--open,
+  &--nojs {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+
+  @media #{$desktop} {
+    position: static;
+  }
+}
+
+.main__companions-wrap {
+  @media #{$desktop} {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 1440px;
+    margin: 0 auto 76px;
+    padding: 0 60px;
+  }
+}
+
+.main__companion-filter-container {
+  @media #{$desktop} {
+    width: 285px;
+    margin: 0;
+    padding: 0;
+    order: 1;
+  }
+}
+
+.main__companions-list-container {
+  @media #{$desktop} {
+    max-width: unset;
+    flex-grow: 1;
+    margin: 0 86px 0 0;
+    padding: 0;
+  }
+}
+
+.main__companion-filter {
+  margin: 23px 0 26px;
+
+  @media #{$tablet} {
+    margin: 43px 0 41px;
+  }
+
+  @media #{$desktop} {
+    margin: 0;
+  }
+}
+
+.main__companions-list {
+  margin: 0 0 46px;
+
+  @media #{$tablet} {
+    margin: 0 0 62px;
+  }
+
+  @media #{$desktop} {
+    margin: 0;
   }
 }

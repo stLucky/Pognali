@@ -2,6 +2,16 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  transition: all $transition-duration;
+
+  &:hover {
+    filter: drop-shadow(0 4px 9px rgba($black-400, 0.16));
+
+    .direction__img {
+      transition: all $transition-duration;
+      transform: scale(1.03);
+    }
+  }
 
   @media #{$tablet} {
     flex-direction: row;
@@ -49,9 +59,10 @@
   color: $black-400;
 
   @media #{$tablet} {
+    margin: 0 0 5px;
+
     font-size: 24px;
     line-height: 24px;
-    margin: 0 0 5px;
   }
 }
 
@@ -68,9 +79,10 @@
   grid-column: 1/2;
 
   @media #{$tablet} {
+    margin: 0 0 17px;
+
     font-size: 20px;
     line-height: 20px;
-    margin: 0 0 17px;
   }
 
   @media #{$desktop} {
@@ -117,9 +129,9 @@
 
 .direction__flag-wrap {
   position: absolute;
-  z-index: 1;
   top: 0;
   left: 25px;
+  z-index: 1;
 
   width: 35px;
   height: 24px;
@@ -129,6 +141,7 @@
   @media #{$tablet} {
     top: 18px;
     left: 100%;
+
     width: 70px;
     height: 47px;
 
@@ -154,12 +167,17 @@
   order: -1;
   width: 270px;
   height: 110px;
+  overflow: hidden;
+
+  border-radius: 10px 10px 0 0;
 
   @media #{$tablet} {
     order: unset;
     width: 186px;
     min-width: 186px;
     height: auto;
+
+    border-radius: 0 20px 20px 0;
   }
 }
 
@@ -168,11 +186,14 @@
   height: 110px;
 
   vertical-align: top;
+  transition: all $transition-duration;
 
   @media #{$tablet} {
     width: 186px;
     height: 100%;
-    object-fit: cover;
+
     border-radius: 0 20px 20px 0;
+
+    object-fit: cover;
   }
 }

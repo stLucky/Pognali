@@ -4,7 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Сервис поиска попутчиков для путешествий</title>
+  <link rel="preload" href="fonts/bloggersans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/bloggersans-light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
+
 </head>
 <body class="page__body body">
   <header class="page__header header header--nojs">
@@ -74,7 +79,7 @@
           </div>
         </a>
       </div>
-      <ul class="header__social social list">
+      <ul class="header__social social social--header list">
         <li class="social__item">
           <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy">
             <span class="visually-hidden">
@@ -99,7 +104,7 @@
       </ul>
     </div>
   </header>
-  <main class="page__main main">
+  <main class="page__main main main--nojs">
     <h1 class="visually-hidden">
       "Погнали" - сервис поиска попутчиков для путешествий
     </h1>
@@ -157,7 +162,7 @@
     <section class="about">
       <div class="container">
         <div class="about__inner">
-          <h2 class="about__title title title--medium title--theme-orange">
+          <h2 class="about__title title title--x-medium title--theme-orange">
             О сервисе
           </h2>
           <p class="about__desc">
@@ -177,7 +182,7 @@
       <div class="container">
         <div class="directions__inner">
           <div class="directions__desc-wrap">
-            <h2 class="directions__title title title--medium title--theme-orange">
+            <h2 class="directions__title title title--x-medium title--theme-orange">
               Направления
             </h2>
             <p class="directions__desc">
@@ -278,7 +283,7 @@
       <div class="container">
         <div class="companions__inner">
           <div class="companions__desc-wrap">
-            <h2 class="companions__title title title--medium title--theme-orange">
+            <h2 class="companions__title title title--x-medium title--theme-orange">
               Попутчики
             </h2>
             <p class="companions__desc">
@@ -291,7 +296,7 @@
           <ul class="companions__list list">
             <li class="companions__item companion">
               <div class="companion__desc-wrap">
-                <h3 class="companion__title status status--offline">
+                <h3 class="companion__title status status--left status--offline">
                   <a class="companion__title-link" href="blank.html">
                     Таня Фирсова
                   </a>
@@ -369,7 +374,7 @@
             </li>
             <li class="companions__item companion">
               <div class="companion__desc-wrap">
-                <h3 class="companion__title status status--online">
+                <h3 class="companion__title status status--left status--online">
                   <a class="companion__title-link" href="blank.html">
                     Петя Демин
                   </a>
@@ -452,7 +457,7 @@
     <section class="placement">
       <div class="container">
         <div class="placement__inner">
-          <h2 class="placement__title title title--medium title--theme-orange">
+          <h2 class="placement__title title title--x-medium title--theme-orange">
             Добавьте свой профиль
           </h2>
           <dl class="placement__list list">
@@ -490,7 +495,10 @@
     <section class="registration">
       <div class="container">
         <div class="registration__inner">
-          <p class="registration__title title title--medium title--theme-orange">
+          <h2 class="visually-hidden">
+            Регистарция
+          </h2>
+          <p class="registration__title title title--x-medium title--theme-orange">
             Заинтересовались?
           </p>
           <p class="registration__text">
@@ -606,6 +614,51 @@
       </div>
     </div>
   </footer>
+  <div class="page__blackout"></div>
+  <section class="tariffs">
+    <div class="tariffs__inner">
+      <h3 class="tariffs__title title title--x-medium title--theme-orange">
+        Бизнес-тарифы
+      </h3>
+      <dl class="tariffs__list">
+        <div class="tariffs__item">
+          <dt class="tariffs__term">
+            Реклама у блогера
+          </dt>
+          <dd class="tariffs__desc">
+            300 000 руб./пост
+          </dd>
+        </div>
+        <div class="tariffs__item">
+          <dt class="tariffs__term">
+            Накрутка подписчиков
+          </dt>
+          <dd class="tariffs__desc">
+            от 1 руб./шт.
+          </dd>
+        </div>
+        <div class="tariffs__item">
+          <dt class="tariffs__term">
+            Лайки от ботов
+          </dt>
+          <dd class="tariffs__desc">
+            от 20 коп./лайк
+          </dd>
+        </div>
+        <div class="tariffs__item">
+          <dt class="tariffs__term">
+            Ваш продакт-плейсмент
+          </dt>
+          <dd class="tariffs__desc">
+            Индивидуально
+          </dd>
+        </div>
+      </dl>
+    </div>
+    <button class="tariffs__button button" type="button">
+      Закрыть окно
+    </button>
+  </section>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=fc4e44cb-c351-4462-93d4-686a12532872&lang=ru_RU"></script>
   <script src="js/script.min.js"></script>
 </body>

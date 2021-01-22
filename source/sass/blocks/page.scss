@@ -12,12 +12,11 @@
   position: relative;
   z-index: -3;
 
-  display: grid;
-  align-content: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   min-width: 320px;
   min-height: 100%;
-
-  grid-template-rows: min-content 1fr min-content;
 }
 
 .page__header {
@@ -34,4 +33,20 @@
 
 .page__main {
   z-index: -3;
+}
+
+.page__blackout {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: none;
+
+  background-color: rgba($black-400, 0.5);
+
+  &--show {
+    display: block;
+  }
 }

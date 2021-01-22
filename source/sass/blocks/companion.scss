@@ -5,6 +5,19 @@
   flex-direction: column;
   width: 270px;
 
+  transition: all $transition-duration;
+
+
+  &:hover {
+    filter: drop-shadow(0 4px 9px rgba($black-400, 0.16));
+
+    .companion__img {
+      transform: scale(1.05);
+
+      transition: all $transition-duration;
+    }
+  }
+
   @media #{$tablet} {
     width: 285px;
   }
@@ -49,6 +62,16 @@
 
 .companion__title-link {
   color: inherit;
+
+  transition: all $transition-duration;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .companion__tags {
@@ -99,6 +122,7 @@
   position: absolute;
   top: 17px;
   left: 17px;
+  z-index: -1;
 
   margin: 0;
 
@@ -110,15 +134,27 @@
 
 .companion__img-wrap {
   order: -1;
+  overflow: hidden;
+
+  border-radius: 10px 10px 0 0;
+
+  @media #{$tablet} {
+    border-radius: 20px 20px 0 0;
+  }
 }
 
 .companion__img {
+  position: relative;
+  z-index: -1;
+
   width: 270px;
   height: 270px;
 
   vertical-align: top;
 
   border-radius: 10px 10px 0 0;
+
+  transition: all $transition-duration;
 
   @media #{$tablet} {
     width: 285px;

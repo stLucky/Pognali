@@ -8,26 +8,45 @@ $dark-blue-400: #161c35;
 $dark-blue-450: #121936;
 $dark-blue-475: #101d41;
 $dark-blue-500: #141b3b;
+$light-blue-300: #f3f4f8;
 $light-blue-350: #d6d9e6;
 $light-blue-400: #dfe3f0;
 $light-blue-500: #d4d9eb;
+$light-blue-550: #d6daed;
+$light-blue-600: #d1d7e9;
+$light-blue-700: #c8cee8;
 $white-400: #ffffff;
 $white-450: #f2f2f2;
+$grey-250: #e5e5e5;
 $grey-275: #e1e3e9;
 $grey-300: #edeff6;
 $grey-325: #e6e8f1;
 $grey-350: #e2e5f2;
+$grey-375: #d9d9d9;
 $grey-400: #cccccc;
 $grey-425: #cbced9;
+$grey-450: #b2b2b2;
+$grey-475: #c4c4c4;
 $grey-500: #afb0b5;
+$grey-550: #aeb4cb;
+$grey-600: #959bb2;
+$grey-650: #999999;
 $grey-700: #444444;
 $orange-400: #ffd74b;
+$orange-425: #f3c72b;
 $orange-450: #ffbd30;
 $orange-600: #ffa530;
 $orange-700: #ff8d30;
+$orange-800: #f26926;
 $orange-900: #ff5c23;
+$pink-200: #f9eaea;
+$pink-250: #ffefef;
+$pink-300: #f9d8d8;
+$pink-350: #f47e7e;
 $pink-400: #f97676;
+$red-400: #ff0000;
 $lightgreen-400: #81e31e;
+
 // Fonts
 
 $basic-font: "Blogger Sans", "Arial", sans-serif;
@@ -37,7 +56,20 @@ $basic-font: "Blogger Sans", "Arial", sans-serif;
 $mobile-tablet-width: 600px;
 $mobile-width-only: 767px;
 $tablet-width: 768px;
+$tablet-width-only: 1439px;
 $desktop-width: 1440px;
 $mobile-tablet: "(min-width: #{$mobile-tablet-width})";
+$mobile-max: "(max-width: #{$mobile-width-only})";
 $tablet: "(min-width: #{$tablet-width})";
+$tablet-max: "(max-width: #{$tablet-width-only})";
 $desktop: "(min-width: #{$desktop-width})";
+
+// Transition
+
+$transition-duration: 200ms;
+
+// Spacer Header for scroll menu
+
+$spacer-mobile: 91px;
+$spacer-tablet: 159px;
+$spacer-desktop: 105px;

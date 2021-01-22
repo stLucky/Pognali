@@ -16,6 +16,17 @@
 
     .main-nav__link {
       color: $white-400;
+
+      &[href] {
+        &:hover {
+          opacity: 1;
+          color: $orange-400;
+        }
+
+        &:active {
+          opacity: 0.3;
+        }
+      }
     }
   }
 }
@@ -55,6 +66,17 @@
   line-height: 35px;
   color: $dark-blue-350;
   text-transform: uppercase;
+  transition: opacity calc(#{$transition-duration} - 100ms);
+
+  &[href] {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 
   @media #{$tablet} {
     font-size: 60px;

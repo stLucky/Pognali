@@ -3,6 +3,7 @@ $radius: 30px;
 .location__text-wrap {
   position: relative;
   z-index: 2;
+
   background-color: $orange-400;
   border-radius: 0 0 $radius $radius;
 
@@ -87,6 +88,20 @@ $radius: 30px;
 
   border: 3px solid $dark-blue-350;
 
+  &:hover {
+    color: $white-400;
+
+    background-color: $dark-blue-350;
+
+    &::after {
+      border-left-color: $white-400;
+    }
+  }
+
+  &:active {
+    color: rgba($white-400, 0.3);
+  }
+
   @media #{$tablet} {
     padding: 25px 33px;
   }
@@ -112,9 +127,10 @@ $radius: 30px;
 
 .location__map-content {
   position: absolute;
-  width: 100%;
   top: -30px;
   bottom: -40px;
+
+  width: 100%;
 
   @media #{$tablet} {
     top: -60px;
@@ -124,18 +140,22 @@ $radius: 30px;
 
 .location__map-img {
   position: absolute;
-  width: 100%;
   top: -52px;
+
+  width: 100%;
   height: 424px;
+
   object-fit: cover;
 
   @media #{$tablet} {
     top: -47px;
+
     height: 581px;
   }
 
   @media #{$desktop} {
     top: -123px;
+
     height: 584px;
   }
 }

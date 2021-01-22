@@ -38,6 +38,19 @@ $label-padding-desktop: 15px;
   background: url("../img/arrow-back.svg") no-repeat center;
   background-size: cover;
 
+  opacity: 0.3;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
+    outline: none;
+  }
+
   &--forward {
     transform: rotate(180deg);
   }
@@ -141,6 +154,8 @@ $label-padding-desktop: 15px;
 
   background-color: $grey-300;
 
+  cursor: pointer;
+
   @media #{$tablet} {
     min-width: 76px;
     min-height: 68px;
@@ -190,7 +205,7 @@ $label-padding-desktop: 15px;
   }
 }
 
-.calendar__input:focus + .calendar__label {
+.calendar__input:not(:disabled) + .calendar__label:hover {
   &::before {
     content: "";
     position: absolute;
@@ -204,12 +219,7 @@ $label-padding-desktop: 15px;
 
   @media #{$tablet} {
     &::before {
-      top: -2px;
-      right: -2px;
-      bottom: -2px;
-      left: -2px;
-
-      border: 4px solid $orange-900;
+      border-width: 4px;
     }
   }
 }

@@ -78,6 +78,10 @@
   }
 }
 
+.user-info__input:focus + .user-info__button {
+  outline: 2px solid $black-400;
+}
+
 .user-info__button {
   display: block;
   width: 100%;
@@ -93,6 +97,17 @@
 
   background-color: $light-blue-400;
   border-radius: 25px;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: $light-blue-600;
+  }
+
+  &:active {
+    background-color: $light-blue-400;
+    color: rgba($dark-blue-400, 0.3);
+  }
 
   @media #{$tablet} {
     order: 3;
@@ -159,6 +174,18 @@
     color: rgba($grey-700, 0.6);
   }
 
+  &:hover {
+    border: 1px solid $grey-550;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    border: 1px solid $dark-blue-400;
+    color: $grey-700;
+  }
+
+
   @media #{$tablet} {
     height: 93px;
     padding: 33px 40px;
@@ -196,6 +223,7 @@
 
 .user-info__legend {
   padding: 0 14px;
+  margin: 0 auto;
 
   font-weight: 700;
   line-height: 18px;

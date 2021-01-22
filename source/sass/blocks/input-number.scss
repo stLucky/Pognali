@@ -1,3 +1,6 @@
+$button-size-mobile: 42px;
+$button-size-tablet: 63px;
+
 .input-number {
   display: flex;
   flex-wrap: wrap;
@@ -59,12 +62,24 @@
 }
 
 .input-number__control-wrap {
-  display: flex;
+  position: relative;
+
   width: 100%;
   min-height: 43px;
+  overflow: hidden;
 
   border: 1px solid $grey-425;
   border-radius: 4px;
+
+  transition: all $transition-duration;
+
+  &:hover {
+    border-color: $grey-600;
+  }
+
+  &:focus-within {
+    border-color: $dark-blue-400;
+  }
 
   @media #{$tablet} {
     min-height: 70px;
@@ -76,32 +91,91 @@
   }
 }
 
-.input-number__button {
-  position: relative;
+.input-number__control-wrap:hover .input-number__button {
+  &::before,
+  &::after {
+    background-color: $grey-600;
+  }
 
-  width: 42px;
-  padding: 14px;
+  &:hover {
+    &::before,
+    &::after {
+      background-color: $grey-650;
+    }
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      background-color: $grey-250;
+    }
+  }
+}
+
+.input-number__control-wrap:focus-within .input-number__button {
+  &::before,
+  &::after {
+    background-color: $dark-blue-400;
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      background-color: $grey-650;
+    }
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      background-color: $grey-250;
+    }
+  }
+}
+
+.input-number__button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+
+  width: $button-size-mobile;
+  padding: 8px;
+
+  cursor: pointer;
 
   &::before,
   &::after {
+    transition: all $transition-duration;
     width: 14px;
     height: 2px;
 
     background-color: $grey-400;
   }
 
+  &:active {
+    &::before,
+    &::after {
+      background-color: $grey-250;
+    }
+  }
+
 
   &--less {
+    left: 0;
+
     &::before {
       content: "";
     }
   }
 
   &--more {
+    right: 0;
+
     &::before,
     &::after {
       content: "";
     }
+
 
     &::after {
       position: absolute;
@@ -113,8 +187,8 @@
   }
 
   @media #{$tablet} {
-    width: 63px;
-    padding: 23px;
+    width: $button-size-tablet;
+    padding: 15px;
 
     &::before,
     &::after {
@@ -129,7 +203,9 @@
 }
 
 .input-number__input {
-  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  padding: 0 $button-size-mobile;
 
   font-weight: 500;
   font-size: 14px;
@@ -139,12 +215,24 @@
 
   border: none;
 
+  appearance: textfield;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+
   @media #{$tablet} {
+    padding: 0 $button-size-tablet;
+
     font-size: 20px;
     line-height: 20px;
   }
 
-  @media #{$desktop} {
-    width: 60px;
+  @media #{$tablet} {
+    min-height: 70px;
   }
 }

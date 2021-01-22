@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Сервис поиска попутчиков для путешествий</title>
+  <link rel="preload" href="fonts/bloggersans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/bloggersans-light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page__body body">
@@ -74,7 +78,7 @@
           </div>
         </a>
       </div>
-      <ul class="header__social social list">
+      <ul class="header__social social social--header list">
         <li class="social__item">
           <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy">
             <span class="visually-hidden">
@@ -99,7 +103,7 @@
       </ul>
     </div>
   </header>
-  <main class="main">
+  <main class="main main--nojs">
     <div class="main__title-wrap">
       <div class="container">
         <h1 class="main__title title title--large title--theme-light">
@@ -116,8 +120,8 @@
             </h2>
             <div class="user-info__top-wrap">
               <p class="user-info__level level level--form">
-                <svg class="level__svg" width="60" height="60" viewBox="0 0 60 60" aria-hidden="true" focusable="false">
-                  <circle cx="30" cy="30" r="28" stroke-dasharray="175,929188601" stroke-dashoffset="32"></circle>
+                <svg class="level__svg" width="100" height="100" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+                  <circle cx="50" cy="50" r="48.5" stroke-dasharray="304,734487398" stroke-dashoffset="62"></circle>
                 </svg>
                 <span class="level__number">
                   80
@@ -136,13 +140,13 @@
                   alt="Петя Демин с рыжей бородой в темных очках на фоне снежных холмов" width="100" height="100">
               </picture>
             </div>
+            <input class="user-info__input visually-hidden" id="user-info__file" type="file" accept="image/*" name="image">
             <label class="user-info__button" for="user-info__file">
               <span class="user-info__button-text">
                 Сменить
               </span>
               фото
             </label>
-            <input class="visually-hidden" id="user-info__file" type="file" accept="image/*" name="image">
             <div class="user-info__textarea-wrap">
               <label class="user-info__legend user-info__legend--textarea" for="user-info__tags">
                 Тэги
@@ -155,9 +159,9 @@
                 Транспорт
               </legend>
               <ul class="user-info__transport-list transport transport--form list">
-                <li class="transport__item transport__item--active">
-                  <input class="visually-hidden" type="checkbox" name="plane" id="user-info__plane">
-                  <label for="user-info__plane">
+                <li class="transport__item">
+                  <input class="transport__input visually-hidden" type="checkbox" name="plane" id="user-info__plane" checked>
+                  <label class="transport__label" for="user-info__plane">
                     <svg class="transport__svg" width="21" height="21" aria-hidden="true" focusable="false">
                       <use xlink:href="img/sprite.svg#icon-plane"></use>
                     </svg>
@@ -166,9 +170,9 @@
                     </span>
                   </label>
                 </li>
-                <li class="transport__item transport__item--active">
-                  <input class="visually-hidden" type="checkbox" name="automobile" id="user-info__automobile">
-                  <label for="user-info__automobile">
+                <li class="transport__item">
+                  <input class="transport__input visually-hidden" type="checkbox" name="automobile" id="user-info__automobile" checked>
+                  <label class="transport__label" for="user-info__automobile">
                     <svg class="transport__svg" width="17" height="19" aria-hidden="true" focusable="false">
                       <use xlink:href="img/sprite.svg#icon-bus"></use>
                     </svg>
@@ -177,9 +181,9 @@
                     </span>
                   </label>
                 </li>
-                <li class="transport__item transport__item--inactive">
-                  <input class="visually-hidden" type="checkbox" name="bicycle" id="user-info__bicycle">
-                  <label for="user-info__bicycle">
+                <li class="transport__item">
+                  <input class="transport__input visually-hidden" type="checkbox" name="bicycle" id="user-info__bicycle">
+                  <label class="transport__label" for="user-info__bicycle">
                     <svg class="transport__svg" width="24" height="24" aria-hidden="true" focusable="false">
                       <use xlink:href="img/sprite.svg#icon-bicycle"></use>
                     </svg>
@@ -188,9 +192,9 @@
                     </span>
                   </label>
                 </li>
-                <li class="transport__item transport__item--inactive">
-                  <input class="visually-hidden" type="checkbox" name="on-foot" id="user-info__on-foot">
-                  <label for="user-info__on-foot">
+                <li class="transport__item">
+                  <input class="transport__input visually-hidden" type="checkbox" name="on-foot" id="user-info__on-foot" checked>
+                  <label class="transport__label" for="user-info__on-foot">
                     <svg class="transport__svg" width="21" height="23" aria-hidden="true" focusable="false">
                       <use xlink:href="img/sprite.svg#icon-run"></use>
                     </svg>
@@ -671,12 +675,12 @@
                     <button class="route__button route__button--select route__button--selected" type="button">
                       Босния и Герцеговина
                     </button>
-                    <div class="route__flag-wrap">
+                    <div class="route__flag-wrap route__flag-wrap--over">
                       <div class="route__flag-tooltip tooltip" data-tooltip="Босния и Герцеговина">
                         <img class="route__flag" src="img/flag-bosnia.svg" alt="Флаг Боснии и Герцеговины" width="35" height="24">
                       </div>
                     </div>
-                    <button class="route__button-close button" type="button" aria-label="Удалить страну"></button>
+                    <button class="route__button-close route__button-close--over button" type="button" aria-label="Удалить страну"></button>
                   </li>
                   <li class="route__item route__item--selected">
                     <button class="route__button route__button--select route__button--selected" type="button">
@@ -695,1166 +699,1168 @@
                     </button>
                     <button class="route__button-close button" type="button" aria-label="Удалить страну"></button>
                     <div class="route__select-country select-country">
-                      <ol class="select-country__letters">
-                        <li class="select-country__letter">
-                          <button class="select-country__button"></button> type="button">
-                          А
-                          </button>
-                        </li>
-                        <li class="select-country__letter">
-                          <button class="select-country__button" type="button">
-                            Б
-                          </button>
-                        </li>
-                        <li class="select-country__letter">
-                          <button class="select-country__button" type="button">
-                            В
-                          </button>
-                        </li>
-                        <li class="select-country__letter">
-                          <button class="select-country__button" type="button">
-                            Г
-                          </button>
-                        </li>
-                        <li class="select-country__letter">
-                          <button class="select-country__button" type="button">
-                            Д
-                          </button>
-                        </li>
-                        <li class="select-country__letter">
-                          <button class="select-country__button" type="button">
-                            Е
-                          </button>
-                        </li>
-                        <li class="select-country__letter">
-                          <button class="select-country__button" type="button">
-                            З
-                          </button>
-                        </li>
-                        <li class="select-country__letter">
-                          <button class="select-country__button" type="button">
-                            И
-                          </button>
-                        </li>
-                        <li class="select-country__letter">
-                          <button class="select-country__button" type="button">
-                            К
-                          </button>
-                        </li>
-                        <li class="select-country__letter">
-                          <button class="select-country__button" type="button">
-                            Л
-                          </button>
-                        </li>
-                        <li class="select-country__letter">
-                          <button class="select-country__button" type="button">
-                            М
-                          </button>
-                        </li>
-                        <li class="select-country__letter">
-                          <button class="select-country__button" type="button">
-                            Н
-                          </button>
-                        </li>
-                        <li class="select-country__letter">
-                          <button class="select-country__button" type="button">
-                            О
-                          </button>
-                        </li>
-                        <li class="select-country__letter">
-                          <button class="select-country__button" type="button">
-                            П
-                          </button>
-                        </li>
-                        <li class="select-country__letter">
-                          <button class="select-country__button" type="button">
-                            Р
-                          </button>
-                        </li>
-                        <li class="select-country__letter">
-                          <button class="select-country__button" type="button">
-                            С
-                          </button>
-                        </li>
-                        <li class="select-country__letter">
-                          <button class="select-country__button" type="button">
-                            Т
-                          </button>
-                        </li>
-                        <li class="select-country__letter">
-                          <button class="select-country__button" type="button">
-                            У
-                          </button>
-                        </li>
-                        <li class="select-country__letter">
-                          <button class="select-country__button" type="button">
-                            Ф
-                          </button>
-                        </li>
-                        <li class="select-country__letter">
-                          <button class="select-country__button" type="button">
-                            Х
-                          </button>
-                        </li>
-                        <li class="select-country__letter">
-                          <button class="select-country__button" type="button">
-                            Ч
-                          </button>
-                        </li>
-                        <li class="select-country__letter">
-                          <button class="select-country__button" type="button">
-                            Ш
-                          </button>
-                        </li>
-                        <li class="select-country__letter">
-                          <button class="select-country__button" type="button">
-                            Э
-                          </button>
-                        </li>
-                        <li class="select-country__letter">
-                          <button class="select-country__button" type="button">
-                            Ю
-                          </button>
-                        </li>
-                        <li class="select-country__letter">
-                          <button class="select-country__button" type="button">
-                            Я
-                          </button>
-                        </li>
-                      </ol>
-                      <ol>
-                        <li>
-                          <label for="">
+                      <div class="select-country__letters-wrap">
+                        <ol class="select-country__letters list">
+                          <li class="select-country__letter">
+                            <button class="select-country__button select-country__button--current button" type="button">
+                              А
+                            </button>
+                          </li>
+                          <li class="select-country__letter">
+                            <button class="select-country__button button" type="button">
+                              Б
+                            </button>
+                          </li>
+                          <li class="select-country__letter">
+                            <button class="select-country__button button" type="button">
+                              В
+                            </button>
+                          </li>
+                          <li class="select-country__letter">
+                            <button class="select-country__button button" type="button">
+                              Г
+                            </button>
+                          </li>
+                          <li class="select-country__letter">
+                            <button class="select-country__button button" type="button">
+                              Д
+                            </button>
+                          </li>
+                          <li class="select-country__letter">
+                            <button class="select-country__button button" type="button">
+                              Е
+                            </button>
+                          </li>
+                          <li class="select-country__letter">
+                            <button class="select-country__button button" type="button">
+                              З
+                            </button>
+                          </li>
+                          <li class="select-country__letter">
+                            <button class="select-country__button button" type="button">
+                              И
+                            </button>
+                          </li>
+                          <li class="select-country__letter">
+                            <button class="select-country__button button" type="button">
+                              К
+                            </button>
+                          </li>
+                          <li class="select-country__letter">
+                            <button class="select-country__button button" type="button">
+                              Л
+                            </button>
+                          </li>
+                          <li class="select-country__letter">
+                            <button class="select-country__button button" type="button">
+                              М
+                            </button>
+                          </li>
+                          <li class="select-country__letter">
+                            <button class="select-country__button button" type="button">
+                              Н
+                            </button>
+                          </li>
+                          <li class="select-country__letter">
+                            <button class="select-country__button button" type="button">
+                              О
+                            </button>
+                          </li>
+                          <li class="select-country__letter">
+                            <button class="select-country__button button" type="button">
+                              П
+                            </button>
+                          </li>
+                          <li class="select-country__letter">
+                            <button class="select-country__button button" type="button">
+                              Р
+                            </button>
+                          </li>
+                          <li class="select-country__letter">
+                            <button class="select-country__button button" type="button">
+                              С
+                            </button>
+                          </li>
+                          <li class="select-country__letter">
+                            <button class="select-country__button button" type="button">
+                              Т
+                            </button>
+                          </li>
+                          <li class="select-country__letter">
+                            <button class="select-country__button button" type="button">
+                              У
+                            </button>
+                          </li>
+                          <li class="select-country__letter">
+                            <button class="select-country__button button" type="button">
+                              Ф
+                            </button>
+                          </li>
+                          <li class="select-country__letter">
+                            <button class="select-country__button button" type="button">
+                              Х
+                            </button>
+                          </li>
+                          <li class="select-country__letter">
+                            <button class="select-country__button button" type="button">
+                              Ч
+                            </button>
+                          </li>
+                          <li class="select-country__letter">
+                            <button class="select-country__button button" type="button">
+                              Ш
+                            </button>
+                          </li>
+                          <li class="select-country__letter">
+                            <button class="select-country__button button" type="button">
+                              Э
+                            </button>
+                          </li>
+                          <li class="select-country__letter">
+                            <button class="select-country__button button" type="button">
+                              Ю
+                            </button>
+                          </li>
+                          <li class="select-country__letter">
+                            <button class="select-country__button button" type="button">
+                              Я
+                            </button>
+                          </li>
+                        </ol>
+                      </div>
+                      <ol class="select-country__countries select-country__countries--current list">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="a" id="australia">
+                          <label class="select-country__label" for="australia">
                             Австралия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="a" id="austria">
+                          <label class="select-country__label" for="austria">
                             Австрия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="a" id="azerbaijan">
+                          <label class="select-country__label" for="azerbaijan">
                             Азербайджан
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="a" id="albania">
+                          <label class="select-country__label" for="albania">
                             Албания
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="a" id="algeria">
+                          <label class="select-country__label" for="algeria">
                             Алжир
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="a" id="angola">
+                          <label class="select-country__label" for="angola">
                             Ангола
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="a" id="andorra">
+                          <label class="select-country__label" for="andorra">
                             Андорра
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="antigua" id="antigua-barbuda">
+                          <label class="select-country__label" for="antigua-barbuda">
                             Антигуа и Барбуда
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="a" id="argentina">
+                          <label class="select-country__label" for="argentina">
                             Аргентина
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="a" id="armenia">
+                          <label class="select-country__label" for="armenia">
                             Армения
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="a" id="afghanistan">
+                          <label class="select-country__label" for="afghanistan">
                             Афганистан
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
                       </ol>
-                      <ol>
-                        <li>
-                          <label for="">
+                      <ol class="select-country__countries list">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="b" id="bahamas">
+                          <label class="select-country__label" for="bahamas">
                             Багамские острова
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="b" id="bangladesh">
+                          <label class="select-country__label" for="bangladesh">
                             Бангладеш
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="b" id="barbados">
+                          <label class="select-country__label" for="barbados">
                             Барбадос
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="b" id="bahrain">
+                          <label class="select-country__label" for="bahrain">
                             Бахрейн
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="b" id="belarus">
+                          <label class="select-country__label" for="belarus">
                             Белоруссия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="b" id="belize">
+                          <label class="select-country__label" for="belize">
                             Белиз
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="b" id="belgium">
+                          <label class="select-country__label" for="belgium">
                             Бельгия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="b" id="benin">
+                          <label class="select-country__label" for="benin">
                             Бенин
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="b" id="bulgaria">
+                          <label class="select-country__label" for="bulgaria">
                             Болгария
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="b" id="bolivia">
+                          <label class="select-country__label" for="bolivia">
                             Боливия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="b" id="bosnia-herzegovina">
+                          <label class="select-country__label" for="bosnia-herzegovina">
                             Босния и Герцеговина
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="b" id="botswana">
+                          <label class="select-country__label" for="botswana">
                             Ботсвана
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="b" id="brazil">
+                          <label class="select-country__label" for="brazil">
                             Бразилия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="b" id="brunei">
+                          <label class="select-country__label" for="brunei">
                             Бруней
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="b" id="burkina-faso">
+                          <label class="select-country__label" for="burkina-faso">
                             Буркина-Фасо
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="b" id="burundi">
+                          <label class="select-country__label" for="burundi">
                             Бурунди
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="b" id="bhutan">
+                          <label class="select-country__label" for="bhutan">
                             Бутан
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
                       </ol>
-                      <ol>
-                        <li>
-                          <label for="">
+                      <ol class="select-country__countries list">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="v" id="vanuatu">
+                          <label class="select-country__label" for="vanuatu">
                             Вануату
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="v" id="britannia">
+                          <label class="select-country__label" for="britannia">
                             Великобритания
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="v" id="hungary">
+                          <label class="select-country__label" for="hungary">
                             Венгрия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="v" id="venezuela">
+                          <label class="select-country__label" for="venezuela">
                             Венесуэла
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="v" id="timor">
+                          <label class="select-country__label" for="timor">
                             Восточный Тимор
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="v" id="vietnam">
+                          <label class="select-country__label" for="vietnam">
                             Вьетнам
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
                       </ol>
-                      <ol>
-                        <li>
-                          <label for="">
+                      <ol class="select-country__countries list">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="g" id="gabon">
+                          <label class="select-country__label" for="gabon">
                             Габон
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="g" id="haiti">
+                          <label class="select-country__label" for="haiti">
                             Гаити
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="g" id="guyana">
+                          <label class="select-country__label" for="guyana">
                             Гайана
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="g" id="gambia">
+                          <label class="select-country__label" for="gambia">
                             Гамбия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="g" id="ghana">
+                          <label class="select-country__label" for="ghana">
                             Гана
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="g" id="guatemala">
+                          <label class="select-country__label" for="guatemala">
                             Гватемала
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="g" id="guinea">
+                          <label class="select-country__label" for="guinea">
                             Гвинея
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="g" id="guinea-bissau">
+                          <label class="select-country__label" for="guinea-bissau">
                             Гвинея-Бисау
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="g" id="germany">
+                          <label class="select-country__label" for="germany">
                             Германия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="g" id="honduras">
+                          <label class="select-country__label" for="honduras">
                             Гондурас
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="g" id="grenada">
+                          <label class="select-country__label" for="grenada">
                             Гренада
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="g" id="greece">
+                          <label class="select-country__label" for="greece">
                             Греция
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="g" id="georgia">
+                          <label class="select-country__label" for="georgia">
                             Грузия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
                       </ol>
-                      <ol>
-                        <li>
-                          <label for="">
+                      <ol class="select-country__countries list">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="d" id="denmark">
+                          <label class="select-country__label" for="denmark">
                             Дания
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="d" id="djibouti">
+                          <label class="select-country__label" for="djibouti">
                             Джибути
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="d" id="dominica">
+                          <label class="select-country__label" for="dominica">
                             Доминика
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="d" id="dominicana">
+                          <label class="select-country__label" for="dominicana">
                             Доминикана
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
                       </ol>
-                      <ol>
-                        <li>
-                          <label for="">
+                      <ol class="select-country__countries list">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="ye" id="egypt">
+                          <label class="select-country__label" for="egypt">
                             Египет
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
                       </ol>
-                      <ol>
-                        <li>
-                          <label for="">
+                      <ol class="select-country__countries list">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="z" id="zambia">
+                          <label class="select-country__label" for="zambia">
                             Замбия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="z" id="zimbabwe">
+                          <label class="select-country__label" for="zimbabwe">
                             Зимбабве
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
                       </ol>
-                      <ol>
-                        <li>
-                          <label for="">
+                      <ol class="select-country__countries list">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="i" id="israel">
+                          <label class="select-country__label" for="israel">
                             Израиль
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="i" id="india">
+                          <label class="select-country__label" for="india">
                             Индия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="i" id="indonesia">
+                          <label class="select-country__label" for="indonesia">
                             Индонезия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="i" id="jordan">
+                          <label class="select-country__label" for="jordan">
                             Иордания
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="i" id="iraq">
+                          <label class="select-country__label" for="iraq">
                             Ирак
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="i" id="iran">
+                          <label class="select-country__label" for="iran">
                             Иран
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="i" id="irish">
+                          <label class="select-country__label" for="irish">
                             Ирландия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="i" id="iceland">
+                          <label class="select-country__label" for="iceland">
                             Исландия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="i" id="spain">
+                          <label class="select-country__label" for="spain">
                             Испания
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="i" id="italy">
+                          <label class="select-country__label" for="italy">
                             Италия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
                       </ol>
-                      <ol>
-                        <li>
-                          <label for="">
+                      <ol class="select-country__countries list">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="k" id="cabo-verde">
+                          <label class="select-country__label" for="cabo-verde">
                             Кабо-Верде
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="k" id="kasakstan">
+                          <label class="select-country__label" for="kasakstan">
                             Казахстан
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="k" id="camboya">
+                          <label class="select-country__label" for="camboya">
                             Камбоджа
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="k" id="camerún">
+                          <label class="select-country__label" for="camerún">
                             Камерун
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="k" id="canada">
+                          <label class="select-country__label" for="canada">
                             Канада
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="k" id="catarro">
+                          <label class="select-country__label" for="catarro">
                             Катар
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="k" id="kenya">
+                          <label class="select-country__label" for="kenya">
                             Кения
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="k" id="chipre">
+                          <label class="select-country__label" for="chipre">
                             Кипр
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="k" id="kirguizia">
+                          <label class="select-country__label" for="kirguizia">
                             Киргизия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="k" id="kiribati">
+                          <label class="select-country__label" for="kiribati">
                             Кирибати
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="k" id="china">
+                          <label class="select-country__label" for="china">
                             Китай
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="k" id="colombia">
+                          <label class="select-country__label" for="colombia">
                             Колумбия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
                       </ol>
-                      <ol>
-                        <li>
-                          <label for="">
+                      <ol class="select-country__countries list">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="l" id="laos">
+                          <label class="select-country__label" for="laos">
                             Лаос
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="l" id="letonia">
+                          <label class="select-country__label" for="letonia">
                             Латвия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="l" id="lesotho">
+                          <label class="select-country__label" for="lesotho">
                             Лесото
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="l" id="liberia">
+                          <label class="select-country__label" for="liberia">
                             Либерия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="l" id="libano">
+                          <label class="select-country__label" for="libano">
                             Ливан
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="l" id="libia">
+                          <label class="select-country__label" for="libia">
                             Ливия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="l" id="lituania">
+                          <label class="select-country__label" for="lituania">
                             Литва
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="l" id="liechtenstein">
+                          <label class="select-country__label" for="liechtenstein">
                             Лихтенштейн
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="l" id="luxemburgo">
+                          <label class="select-country__label" for="luxemburgo">
                             Люксембург
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
                       </ol>
-                      <ol>
-                        <li>
-                          <label for="">
+                      <ol class="select-country__countries list">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="m" id="mauricio">
+                          <label class="select-country__label" for="mauricio">
                             Маврикий
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="m" id="mauritania">
+                          <label class="select-country__label" for="mauritania">
                             Мавритания
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="m" id="madagascar">
+                          <label class="select-country__label" for="madagascar">
                             Мадагаскар
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="m" id="malawi">
+                          <label class="select-country__label" for="malawi">
                             Малави
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="m" id="malasia">
+                          <label class="select-country__label" for="malasia">
                             Малайзия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="m" id="mali">
+                          <label class="select-country__label" for="mali">
                             Мали
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="m" id="maldivas">
+                          <label class="select-country__label" for="maldivas">
                             Мальдивы
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="m" id="malta">
+                          <label class="select-country__label" for="malta">
                             Мальта
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="m" id="marruecos">
+                          <label class="select-country__label" for="marruecos">
                             Марокко
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
                       </ol>
-                      <ol>
-                        <li>
-                          <label for="">
+                      <ol class="select-country__countries list">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="n" id="namibia">
+                          <label class="select-country__label" for="namibia">
                             Намибия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="n" id="nauru">
+                          <label class="select-country__label" for="nauru">
                             Науру
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="n" id="nepal">
+                          <label class="select-country__label" for="nepal">
                             Непал
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="n" id="niger">
+                          <label class="select-country__label" for="niger">
                             Нигер
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="n" id="nigeria">
+                          <label class="select-country__label" for="nigeria">
                             Нигерия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="n" id="paises-bajos">
+                          <label class="select-country__label" for="paises-bajos">
                             Нидерланды
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="n" id="nicaragua">
+                          <label class="select-country__label" for="nicaragua">
                             Никарагуа
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="n" id="nueva-zelandia">
+                          <label class="select-country__label" for="nueva-zelandia">
                             Новая Зеландия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="n" id="noruega">
+                          <label class="select-country__label" for="noruega">
                             Норвегия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
                       </ol>
-                      <ol>
-                        <li>
-                          <label for="">
+                      <ol class="select-country__countries list">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="o" id="oae">
+                          <label class="select-country__label" for="oae">
                             ОАЭ
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="o" id="oman">
+                          <label class="select-country__label" for="oman">
                             Оман
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
                       </ol>
-                      <ol>
-                        <li>
-                          <label for="">
+                      <ol class="select-country__countries list">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="p" id="pakistan">
+                          <label class="select-country__label" for="pakistan">
                             Пакистан
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="p" id="palau">
+                          <label class="select-country__label" for="palau">
                             Палау
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="p" id="panama">
+                          <label class="select-country__label" for="panama">
                             Панама
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="p" id="papua">
+                          <label class="select-country__label" for="papua">
                             Папуа - Новая Гвинея
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="p" id="paraguay">
+                          <label class="select-country__label" for="paraguay">
                             Парагвай
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="p" id="peru">
+                          <label class="select-country__label" for="peru">
                             Перу
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="p" id="polonia">
+                          <label class="select-country__label" for="polonia">
                             Польша
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="p" id="portugal">
+                          <label class="select-country__label" for="portugal">
                             Португалия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
                       </ol>
-                      <ol>
-                        <li>
-                          <label for="">
+                      <ol class="select-country__countries list">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="r" id="ruanda">
+                          <label class="select-country__label" for="ruanda">
                             Руанда
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="r" id="rumania">
+                          <label class="select-country__label" for="rumania">
                             Румыния
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="r" id="russia">
+                          <label class="select-country__label" for="russia">
                             Россия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
                       </ol>
-                      <ol>
-                        <li>
-                          <label for="">
+                      <ol class="select-country__countries list">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="s" id="salvador">
+                          <label class="select-country__label" for="salvador">
                             Сальвадор
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="s" id="samoa">
+                          <label class="select-country__label" for="samoa">
                             Самоа
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="s" id="san-marino">
+                          <label class="select-country__label" for="san-marino">
                             Сан-Марино
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="s" id="arabia-saudita">
+                          <label class="select-country__label" for="arabia-saudita">
                             Саудовская Аравия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="s" id="seychelles">
+                          <label class="select-country__label" for="seychelles">
                             Сейшелы
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="s" id="senegal">
+                          <label class="select-country__label" for="senegal">
                             Сенегал
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="s" id="serbia">
+                          <label class="select-country__label" for="serbia">
                             Сербия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="s" id="singapur">
+                          <label class="select-country__label" for="singapur">
                             Сингапур
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="s" id="siria">
+                          <label class="select-country__label" for="siria">
                             Сирия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="s" id="eslovaquia">
+                          <label class="select-country__label" for="eslovaquia">
                             Словакия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="s" id="eslovenia">
+                          <label class="select-country__label" for="eslovenia">
                             Словения
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="s" id="usa">
+                          <label class="select-country__label" for="usa">
                             США
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
                       </ol>
-                      <ol>
-                        <li>
-                          <label for="">
+                      <ol class="select-country__countries list">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="t" id="tadzhikistan">
+                          <label class="select-country__label" for="t">
                             Таджикистан
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="t" id="tailandia">
+                          <label class="select-country__label" for="tailandia">
                             Таиланд
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="t" id="tanzania">
+                          <label class="select-country__label" for="tanzania">
                             Танзания
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="t" id="togo">
+                          <label class="select-country__label" for="togo">
                             Того
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="t" id="tonga">
+                          <label class="select-country__label" for="tonga">
                             Тонга
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="t" id="trinidad-tobago">
+                          <label class="select-country__label" for="trinidad-tobago">
                             Тринидад и Тобаго
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="t" id="tuvalu">
+                          <label class="select-country__label" for="tuvalu">
                             Тувалу
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="t" id="tunicia">
+                          <label class="select-country__label" for="tunicia">
                             Тунис
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="t" id="turkmenia">
+                          <label class="select-country__label" for="turkmenia">
                             Туркмения
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="t" id="turquia">
+                          <label class="select-country__label" for="turquia">
                             Турция
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
                       </ol>
-                      <ol>
-                        <li>
-                          <label for="">
+                      <ol class="select-country__countries list">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="u" id="uganda">
+                          <label class="select-country__label" for="uganda">
                             Уганда
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="u" id="uzbekistan">
+                          <label class="select-country__label" for="uzbekistan">
                             Узбекистан
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="u" id="ucrania">
+                          <label class="select-country__label" for="ucrania">
                             Украина
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="u" id="uruguay">
+                          <label class="select-country__label" for="uruguay">
                             Уругвай
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
                       </ol>
-                      <ol>
-                        <li>
-                          <label for="">
+                      <ol class="select-country__countries list">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="f" id="fidji">
+                          <label class="select-country__label" for="fidji">
                             Фиджи
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="f" id="filipinas">
+                          <label class="select-country__label" for="filipinas">
                             Филиппины
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="f" id="finlandia">
+                          <label class="select-country__label" for="finlandia">
                             Финляндия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="f" id="francia">
+                          <label class="select-country__label" for="francia">
                             Франция
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
                       </ol>
-                      <ol>
-                        <li>
-                          <label for="">
+                      <ol class="select-country__countries list">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="h" id="croacia">
+                          <label class="select-country__label" for="croacia">
                             Хорватия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
                       </ol>
-                      <ol>
-                        <li>
-                          <label for="">
+                      <ol class="select-country__countries list">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="ch" id="chad">
+                          <label class="select-country__label" for="chad">
                             Чад
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="ch" id="montenegro">
+                          <label class="select-country__label" for="montenegro">
                             Черногория
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="ch" id="chequia">
+                          <label class="select-country__label" for="chequia">
                             Чехия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="ch" id="chile">
+                          <label class="select-country__label" for="chile">
                             Чили
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
                       </ol>
-                      <ol>
-                        <li>
-                          <label for="">
+                      <ol class="select-country__countries list">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="sh" id="suiza">
+                          <label class="select-country__label" for="suiza">
                             Швейцария
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="sh" id="suecia">
+                          <label class="select-country__label" for="suecia">
                             Швеция
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="sh" id="shri-lanka">
+                          <label class="select-country__label" for="shri-lanka">
                             Шри-Ланка
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
                       </ol>
-                      <ol>
-                        <li>
-                          <label for="">
+                      <ol class="select-country__countries list">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="e" id="ecuador">
+                          <label class="select-country__label" for="ecuador">
                             Эквадор
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="e" id="eritrea">
+                          <label class="select-country__label" for="eritrea">
                             Эритрея
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="e" id="eswatini">
+                          <label class="select-country__label" for="eswatini">
                             Эсватини
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="e" id="estonia">
+                          <label class="select-country__label" for="estonia">
                             Эстония
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="e" id="etiopia">
+                          <label class="select-country__label" for="etiopia">
                             Эфиопия
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
                       </ol>
-                      <ol>
-                        <li>
-                          <label for="">
+                      <ol class="select-country__countries list">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="yu" id="rsa">
+                          <label class="select-country__label" for="rsa">
                             ЮАР
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="yu" id="sudan">
+                          <label class="select-country__label" for="sudan">
                             Южный Судан
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
                       </ol>
-                      <ol>
-                        <li>
-                          <label for="">
+                      <ol class="select-country__countries list">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="ya" id="jamaica">
+                          <label class="select-country__label" for="jamaica">
                             Ямайка
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
-                        <li>
-                          <label for="">
+                        <li class="select-country__country">
+                          <input class="select-country__input visually-hidden" type="radio" name="ya" id="japon">
+                          <label class="select-country__label" for="japon">
                             Япония
                           </label>
-                          <input type="radio" name="" id="">
                         </li>
                       </ol>
                     </div>
                   </li>
                 </ol>
                 <div class="route__item route__item--add">
-                  <button class="route__button route__button--unselected route__button--add">
+                  <button class="route__button route__button--unselected route__button--add" type="button">
                     Добавить страну
                   </button>
                 </div>
@@ -1905,7 +1911,10 @@
                     </div>
                   </div>
                   <div class="recreation__textarea-wrap">
-                    <textarea class="recreation__textarea" name="action-plan" id="action-plan" placeholder="План действий"></textarea>
+                    <textarea class="recreation__textarea" name="action-plan" id="action-plan" placeholder="План действий" required></textarea>
+                    <div class="recreation__error">
+                      Это поле должно быть заполнено
+                    </div>
                   </div>
                 </li>
                 <li class="recreation__item recreation__item--point">
@@ -1918,8 +1927,11 @@
                     </div>
                   </div>
                   <div class="recreation__textarea-wrap">
-                    <textarea class="recreation__textarea" name="action-plan" id="action-plan"
-                      placeholder="План действий">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться&nbsp;архитектурой и вот это все.</textarea>
+                    <textarea class="recreation__textarea" name="action-plan" id="action-plan" placeholder="План действий"
+                      required>Пить пиво и лазить по&nbsp;старым замкам, наслаждаться&nbsp;архитектурой и вот это все.</textarea>
+                    <div class="recreation__error">
+                      Это поле должно быть заполнено
+                    </div>
                   </div>
                 </li>
               </ol>
