@@ -11,7 +11,7 @@ $radius-mobile: 20px;
   display: none;
   min-width: 270px;
   max-width: 400px;
-  max-height: 100%;
+  max-height: 443px;
   overflow: auto;
   margin: auto;
 
@@ -30,6 +30,7 @@ $radius-mobile: 20px;
     left: 40px;
     right: 40px;
     max-width: 700px;
+    max-height: 526px;
   }
 
   @media #{$desktop} {
@@ -37,7 +38,6 @@ $radius-mobile: 20px;
     left: 50%;
 
     max-width: 750px;
-    min-height: 526px;
     margin: 0;
 
     transform: translate(-50%, -50%);

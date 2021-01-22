@@ -84,6 +84,7 @@ $radius: 30px;
     }
 
     &::after {
+      z-index: -2;
       top: 9px;
       right: 34px;
 

@@ -51,18 +51,21 @@ $radius: 30px;
 .footer__logo {
   display: inline-block;
   margin: 0 0 37px;
+
   transition: all $transition-duration;
 
+  @media #{$tablet} {
+    margin: 0;
+  }
+}
+
+.footer__logo[href] {
   &:hover {
     opacity: 0.6;
   }
 
   &:active {
     opacity: 0.3;
-  }
-
-  @media #{$tablet} {
-    margin: 0;
   }
 }
 
