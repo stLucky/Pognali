@@ -26,6 +26,8 @@
   top: 0;
   left: 0;
 
+  overflow-y: scroll;
+
   .header__toggle {
     &::before,
     &::after {
@@ -118,7 +120,6 @@
 .header--nojs {
   @media #{$tablet-max} {
     height: 100%;
-    overflow-y: scroll;
 
     .header__logo-wrap {
       order: 1;

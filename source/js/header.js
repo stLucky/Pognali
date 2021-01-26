@@ -1,3 +1,4 @@
+const pageBody = document.querySelector(".page__body");
 const header = document.querySelector(".header");
 const mainNav = document.querySelector(".main-nav");
 const mainPage = document.querySelector(".main");
@@ -8,10 +9,11 @@ headerToggle.addEventListener("click", function () {
   if (header.classList.contains("header--opened")) {
     toogleText.textContent = "Закрыть меню";
     header.classList.remove("header--opened");
+    pageBody.classList.remove("page__body--hidden");
   } else {
     toogleText.textContent = "Открыть меню";
     header.classList.add("header--opened");
-
+    pageBody.classList.add("page__body--hidden");
   }
 
   if (header.classList.contains("header--scroll") && header.classList.contains("header--opened")) {
