@@ -19,6 +19,12 @@ $radius: 20px;
     background-color: $dark-blue-400;
   }
 
+  &--nojs-blank {
+    &::before {
+      display: none;
+    }
+  }
+
   @media #{$tablet} {
     padding: $spacer-tablet 0 0;
 
@@ -39,6 +45,8 @@ $radius: 20px;
     }
 
     &--nojs {
+      padding: 0;
+
       &::before {
         display: none;
       }
@@ -68,12 +76,12 @@ $radius: 20px;
   }
 
   @media #{$tablet} {
-    $radius: 60px;
-
     padding: 57px 0 0;
 
     background-color: $dark-blue-375;
     border-radius: 0 0 $radius $radius;
+
+    $radius: 60px;
 
     &--sublayer {
       &::before {
@@ -139,6 +147,7 @@ $radius: 20px;
 
 .main__link {
   display: none;
+
   transition: all $transition-duration;
 
   &:hover {
@@ -223,17 +232,17 @@ $radius: 20px;
 
 .main__companion-filter-container {
   @media #{$desktop} {
+    order: 1;
     width: 285px;
     margin: 0;
     padding: 0;
-    order: 1;
   }
 }
 
 .main__companions-list-container {
   @media #{$desktop} {
-    max-width: unset;
     flex-grow: 1;
+    max-width: unset;
     margin: 0 86px 0 0;
     padding: 0;
   }

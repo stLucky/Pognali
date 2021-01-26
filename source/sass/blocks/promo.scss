@@ -42,6 +42,7 @@
       width: 100%;
       height: 750px;
 
+      background-color: $dark-blue-400;
       background-image: url("../img/globe-back_desktop.jpg");
       background-repeat: no-repeat;
       background-size: cover;
@@ -100,7 +101,6 @@
   position: relative;
 
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin: 246px 0 28px;
@@ -458,19 +458,16 @@
     padding: 30px 34px;
 
     &--step-first {
-      width: 315px;
 
       border-radius: 20px 0 0 20px;
     }
 
     &--step-second {
-      width: 345px;
 
       border-radius: 20px 0 0 20px;
     }
 
     &--step-third {
-      width: 345px;
 
       border-radius: 20px 0 0 20px;
 
@@ -489,7 +486,6 @@
     }
 
     &--step-fourth {
-      width: 315px;
 
       border-radius: 20px;
     }
