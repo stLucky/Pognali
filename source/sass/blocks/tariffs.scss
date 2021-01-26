@@ -3,16 +3,15 @@ $radius-mobile: 20px;
 .tariffs {
   position: fixed;
   z-index: 25;
-  top: calc(50% + #{$spacer-mobile} / 2);
-
+  top: calc(50%);
+  // + #{$spacer-mobile} / 2
   left: 20px;
   right: 20px;
   display: none;
   min-width: 270px;
   max-width: 400px;
-  max-height: 443px;
+  max-height: 450px;
   margin: auto;
-
 
   overflow-y: auto;
 
@@ -27,15 +26,17 @@ $radius-mobile: 20px;
   }
 
   @media #{$tablet} {
-    top: calc(50% + #{$spacer-tablet});
+    top: calc(50%);
+    // + #{$spacer-tablet}
     left: 40px;
     right: 40px;
     max-width: 700px;
-    max-height: 526px;
+    max-height: 530px;
   }
 
   @media #{$desktop} {
-    top: calc(50% + #{$spacer-desktop} / 2);
+    top: calc(50%);
+    // + #{$spacer-desktop} / 2
     left: 50%;
 
     max-width: 750px;
@@ -100,7 +101,7 @@ $radius-mobile: 20px;
 
 .tariffs__button {
   width: 100%;
-  padding: 21px;
+  padding: 18px;
 
   font-weight: 700;
   line-height: 24px;
@@ -125,6 +126,6 @@ $radius-mobile: 20px;
   @media #{$tablet} {
     font-size: 24px;
     text-transform: initial;
-    padding: 41px;
+    padding: 38px;
   }
 }
