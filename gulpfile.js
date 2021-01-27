@@ -97,8 +97,8 @@ const sprite = () => {
   return gulp.src("source/img/icons/icon-*.svg")
     .pipe(svgmin({
       plugins: [{
-                removeViewBox: false
-            }],
+        removeViewBox: false
+      }],
       js2svg: {
         pretty: true
       }
@@ -144,7 +144,10 @@ const clean = () => {
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: "build"
+      baseDir: "build",
+      routes: {
+        "/node_modules": "node_modules"
+      }
     },
     cors: true,
     notify: false,

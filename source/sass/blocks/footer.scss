@@ -95,6 +95,8 @@ $radius: 30px;
   @media #{$tablet} {
     margin: 0 7px 0 0;
     padding: 0;
+
+    border-bottom: none;
   }
 
   @media #{$desktop} {

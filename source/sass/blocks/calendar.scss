@@ -66,8 +66,8 @@ $label-padding-desktop: 15px;
   }
 
   @media #{$desktop} {
-    width: 35px;
-    height: 35px;
+    width: 29px;
+    height: 34px;
     margin: 0;
   }
 }
@@ -205,7 +205,8 @@ $label-padding-desktop: 15px;
   }
 }
 
-.calendar__input:not(:disabled) + .calendar__label:hover {
+.calendar__input:not(:disabled) + .calendar__label:hover,
+.calendar__input:focus:not(:disabled) + .calendar__label {
   &::before {
     content: "";
     position: absolute;
