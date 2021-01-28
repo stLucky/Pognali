@@ -138,7 +138,7 @@ $recreation-padding-right-desktop: 114px;
     bottom: 0;
     left: calc(100% - 40px);
 
-    background-image: linear-gradient(to left, $white-400 40%, transparent);
+    background-image: linear-gradient(to left, $white-400 40%, rgba($white-400, 0));
     border-radius: 0 4px 4px 0;
   }
 
