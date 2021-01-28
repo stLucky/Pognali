@@ -22,9 +22,9 @@ $radius: 30px;
   }
 
   @media #{$desktop} {
-    border-radius: $radius $radius 0 0;
-
     $radius: 60px;
+
+    border-radius: $radius $radius 0 0;
   }
 }
 

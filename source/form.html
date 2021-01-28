@@ -41,17 +41,17 @@
       <nav class="header__main-nav main-nav main-nav--theme-light">
         <ul class="main-nav__list list">
           <li class="main-nav__item">
-            <a class="main-nav__link" href="blank.html">
+            <a class="main-nav__link" href="blank.html" data-hover="О сервисе">
               О сервисе
             </a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link">
+            <a class="main-nav__link" data-hover="Направления">
               Направления
             </a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">
+            <a class="main-nav__link" href="catalog.html" data-hover="Попутчики">
               Попутчики
             </a>
           </li>
@@ -278,9 +278,9 @@
             </div>
             <fieldset class="add-plan__step step" id="dates">
               <div class="step__header">
-                <legend class="step__title">
+                <h3 class="step__title">
                   Шаг 1.<br> Даты пребывания
-                </legend>
+                </h3>
                 <p class="step__desc">
                   Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели бы позвать в поездку, и ее предполагаемую длительность.
                 </p>
@@ -645,9 +645,9 @@
             </fieldset>
             <fieldset class="add-plan__step add-plan__step--special-margin step step--special-padding" id="route">
               <div class="step__header step__header--no-margin">
-                <legend class="step__title">
+                <h3 class="step__title">
                   Шаг 2.<br> Маршрут
-                </legend>
+                </h3>
                 <p class="step__desc step__desc--no-margin step__desc--special-padding">
                   Укажите страны, которые вы хотели бы посетить.<br> Это может быть одна или сразу несколько.
                 </p>
@@ -672,7 +672,7 @@
               <div class="step__route-wrap">
                 <ol class="step__route route list">
                   <li class="route__item route__item--selected">
-                    <button class="route__button route__button--select route__button--selected" type="button">
+                    <button class="route__button route__button--select route__button--selected route__button--offset-arrow" type="button">
                       Босния и Герцеговина
                     </button>
                     <div class="route__flag-wrap route__flag-wrap--over">
@@ -1631,7 +1631,7 @@
                       <ol class="select-country__countries list">
                         <li class="select-country__country">
                           <input class="select-country__input visually-hidden" type="radio" name="t" id="tadzhikistan">
-                          <label class="select-country__label" for="t">
+                          <label class="select-country__label" for="tadzhikistan">
                             Таджикистан
                           </label>
                         </li>
@@ -1876,9 +1876,9 @@
             </fieldset>
             <fieldset class="add-plan__step step step--special-padding" id="recreation">
               <div class="step__header step__header--special-margin">
-                <legend class="step__title">
+                <h3 class="step__title">
                   Шаг 3.<br> Развлечения
-                </legend>
+                </h3>
                 <p class="step__desc step__desc--special-padding step__desc--special-margin">
                   Наконец, расскажите о своих планах времяпровождения.<br> Можно писать в свободной форме и ставить тэги.
                 </p>
@@ -1903,7 +1903,7 @@
               <ol class="step__recreation recreation list">
                 <li class="recreation__item recreation__item--scheme recreation__item--point">
                   <div class="recreation__label-wrap">
-                    <label class="recreation__label" for="action-plan">
+                    <label class="recreation__label" for="action-plan__bosnia">
                       Босния и Герцеговина
                     </label>
                     <div class="recreation__flag-tooltip tooltip" data-tooltip="Босния и Герцеговина">
@@ -1911,7 +1911,7 @@
                     </div>
                   </div>
                   <div class="recreation__textarea-wrap">
-                    <textarea class="recreation__textarea" name="action-plan" id="action-plan" placeholder="План действий" required></textarea>
+                    <textarea class="recreation__textarea" name="action-plan" id="action-plan__bosnia" placeholder="План действий" required></textarea>
                     <div class="recreation__error">
                       Это поле должно быть заполнено
                     </div>
@@ -1919,7 +1919,7 @@
                 </li>
                 <li class="recreation__item recreation__item--point">
                   <div class="recreation__label-wrap">
-                    <label class="recreation__label" for="action-plan">
+                    <label class="recreation__label" for="action-plan__czech">
                       Чехия
                     </label>
                     <div class="recreation__flag-tooltip tooltip" data-tooltip="Чехия">
@@ -1927,7 +1927,7 @@
                     </div>
                   </div>
                   <div class="recreation__textarea-wrap">
-                    <textarea class="recreation__textarea" name="action-plan" id="action-plan" placeholder="План действий"
+                    <textarea class="recreation__textarea" name="action-plan" id="action-plan__czech" placeholder="План действий"
                       required>Пить пиво и лазить по&nbsp;старым замкам, наслаждаться&nbsp;архитектурой и вот это все.</textarea>
                     <div class="recreation__error">
                       Это поле должно быть заполнено

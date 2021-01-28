@@ -26,6 +26,10 @@
         &:active {
           opacity: 0.3;
         }
+
+        &:focus {
+          outline-color: $white-400;
+        }
       }
     }
   }
@@ -51,6 +55,8 @@
 }
 
 .main-nav__item {
+  overflow-y: hidden;
+
   @media #{$desktop} {
     margin: 0 34px 0 0;
 
@@ -61,6 +67,8 @@
 }
 
 .main-nav__link {
+  display: inline-block;
+
   font-weight: 500;
   font-size: 30px;
   line-height: 35px;
@@ -76,6 +84,10 @@
     &:active {
       opacity: 0.3;
     }
+
+    &:focus {
+      outline-color: $black-400;
+    }
   }
 
   @media #{$tablet} {
@@ -84,7 +96,24 @@
   }
 
   @media #{$desktop} {
+    position: relative;
     font-size: 20px;
     line-height: 20px;
+
+    &[href] {
+      transition: transform $transition-duration;
+
+      &:hover {
+        transform: translateY(-100%);
+      }
+    }
+
+    &::before {
+      content: attr(data-hover);
+      position: absolute;
+
+      top: 100%;
+      left: 0;
+    }
   }
 }
